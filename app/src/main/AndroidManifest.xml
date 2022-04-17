@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TulaSteel">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
