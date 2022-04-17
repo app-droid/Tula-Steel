@@ -32,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         vb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(vb?.root)
         init()
+        initNavigation()
+    }
+
+    fun initNavigation () = with(vb) {
+        this!!.menuRiadovoi.setOnClickListener {
+            startActivity(RiadovoiProkatActivity.getStartIntent(this@MainActivity))
+            finish()
+        }
     }
 
     private fun init() = with(vb) {
@@ -50,5 +58,10 @@ class MainActivity : AppCompatActivity() {
             tvTitle.text = data.name
             ivPicture.setImageResource(data.picture)
         }
+    }
+
+    override fun onDestroy() {
+        vb = null
+        super.onDestroy()
     }
 }

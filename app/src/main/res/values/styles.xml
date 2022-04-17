@@ -51,6 +51,25 @@
         <item name="android:backgroundTint">@color/card_blue_background</item>
     </style>
 
+    <style name="AppNavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">@style/AppNavigationViewItemTextAppearance</item>
+
+    </style>
+    <style name="AppNavigationViewItemTextAppearance" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+    <item name="android:textSize">36px</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#F0F0F0</item>
+</style>
+
+    <style name="RVStyle">
+        <item name="android:layout_marginTop">@dimen/top_margin_average</item>
+        <item name="android:layout_marginBottom">@dimen/top_margin_average</item>
+        <item name="android:layout_marginLeft">@dimen/side_margin</item>
+        <item name="spanCount">3</item>
+        <item name="layoutManager">androidx.recyclerview.widget.GridLayoutManager</item>
+    </style>
+
 
 
 

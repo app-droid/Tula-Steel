@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/drawer_selector.xml" value="0.2203125" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/hamburger.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_riadovoi_prokat.xml" value="0.48756218905472637" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/app_bar.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/content_riadovoi_prokat.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/fragment_prokat_riadovoi.xml" value="0.25" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/header_navigation_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/item_card_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/nav_header_riadovoi_prokat.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/test.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/menu/navigation_drawer.xml" value="0.67" />
       </map>
     </option>
   </component>

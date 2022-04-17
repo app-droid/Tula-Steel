@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FragmentProkatRiadovoi">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_side_menu"
+        android:layout_width="490px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="@dimen/top_margin"
+        android:paddingLeft="@dimen/side_margin"
+        android:paddingRight="@dimen/side_margin"
+        android:background="@drawable/prokat_riadovoi_back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36px">
+
+            <ImageView
+                android:id="@+id/iv_product_label"
+                android:layout_width="55px"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/production_label"/>
+
+            <TextView
+                android:id="@+id/tv_product"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="#F6F0F0"
+                android:text="ПРОДУКЦИЯ"
+                android:gravity="center_vertical"
+                android:textSize="32px"
+                app:layout_constraintStart_toEndOf="@id/iv_product_label"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="24px">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textColor="#F6F0F0"
+            android:text="РЯДОВОЙ \nПРОКАТ"
+            android:textSize="48px"
+            android:singleLine="false"
+            android:layout_marginTop="80px"
+            android:lineSpacingExtra="4dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80px">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="108px"
+                android:layout_height="108px"
+                android:src="@drawable/left_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="108px"
+                android:layout_height="108px"
+                android:src="@drawable/right_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/body"
+        style="@style/TextBodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginRight="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/prokat_riadovoi_body1"
+        android:maxWidth="1318px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/body2"
+        style="@style/TextBodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginRight="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin_average"
+        android:text="@string/prokat_riadovoi_body2"
+        android:maxWidth="1318px"
+        app:layout_constraintTop_toBottomOf="@id/body"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_schema"
+        android:layout_width="1318px"
+        android:layout_height="106px"
+        android:src="@drawable/prokat_riadovoi_shema"
+        app:layout_constraintTop_toBottomOf="@id/body2"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/top_margin_average">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_diametr"
+        android:layout_width="48px"
+        android:layout_height="48px"
+        android:src="@drawable/diametr"
+        android:layout_marginLeft="@dimen/side_margin"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
+        app:layout_constraintTop_toBottomOf="@id/iv_schema"
+        android:layout_marginTop="@dimen/top_margin_average">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_diametr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="6 - 40 мм"
+        android:textColor="@color/black"
+        android:textSize="20px"
+        app:layout_constraintStart_toEndOf="@id/iv_diametr"
+        app:layout_constraintTop_toTopOf="@id/iv_diametr">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_dlina"
+        android:layout_width="52px"
+        android:layout_height="48px"
+        android:src="@drawable/dlina"
+        app:layout_constraintTop_toBottomOf="@id/iv_schema"
+        app:layout_constraintStart_toEndOf="@id/tv_diametr"
+        android:layout_marginTop="@dimen/top_margin_average"
+        android:layout_marginLeft="86px">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_dlina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="4 - 12 м"
+        android:textColor="@color/black"
+        android:textSize="20px"
+        app:layout_constraintStart_toEndOf="@id/iv_dlina"
+        app:layout_constraintTop_toTopOf="@id/iv_dlina"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_prokat_riadovoi"
+        style="@style/RVStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
+        app:layout_constraintTop_toBottomOf="@id/tv_dlina"
+        tools:listitem="@layout/item_card_main"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
