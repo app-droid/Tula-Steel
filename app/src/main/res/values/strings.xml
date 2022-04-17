@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Tula-Steel</string>
+
+    !-- Contact bar -->
+    <string name="telephone_number">+7(800) 700-43-63</string>
+    <string name="email">tdts@metholding.com</string>
+    <string name="address">115419, г. Москва, ул. 2-й Верхний Михайловский проезд д. 9</string>
+    <string name="web">www.td.tula-steel.ru</string>
+
+    !-- Header -->
+    <string name="our_prodaction">Наша продукция</string>
+    <string name="label">Тула-Сталь</string>
+
+    !-- Body_text -->
+    <string name="main_body">Металлургический завод «Тула-Сталь» выпускает продукцию на современном оборудовании
+от ведущих европейских поставщиков. Это позволяет производить прокат самого высокого
+качества для решения любых задач наших клиентов.</string>
+
+    <string name="main_body2"> Для изготовления продукции мы используем высококачественный чугун от всемирно известного завода «Тулачермет».</string>
+
+    !-- Menu -->
+
+    <string name="main">Главная</string>
+    <string name="prokat_riadovoi">Прокат рядовой</string>
+    <string name="prokat_konstrukchionnyi">Прокат конструкционный</string>
+    <string name="kvadratnaia_zagotovka">Квадратная заготовка</string>
+    <string name="katanka">Катанка</string>
+    <string name="about">О предприятии</string>
+    <string name="certificates">Сертификаты</string>
 </resources>
