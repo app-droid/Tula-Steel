@@ -1,5 +1,6 @@
 package ru.alinadorozhkina.tula_steel.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -45,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         this!!.menuRiadovoi.setOnClickListener {
             intent(ProkatRiadovoi)
         }
+
+        this!!.menuKonstrukcionnyi.setOnClickListener {
+            intent(ProkatKonstrukchionnyi)
+        }
     }
 
     private fun initRV() = with(vb) {
@@ -74,5 +79,9 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         vb = null
         super.onDestroy()
+    }
+
+        companion object {
+        fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
 }

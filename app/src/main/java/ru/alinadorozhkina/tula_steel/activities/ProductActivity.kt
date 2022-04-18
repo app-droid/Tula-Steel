@@ -11,10 +11,11 @@ import androidx.core.view.GravityCompat
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductBinding
+import ru.alinadorozhkina.tula_steel.fragments.FragmentProkatKonstruktcionnyi
 import ru.alinadorozhkina.tula_steel.fragments.FragmentProkatRiadovoi
 
 
-class ProductActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+class ProductActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var vb: ActivityProductBinding? = null
     private lateinit var drawer: DrawerLayout
@@ -26,7 +27,7 @@ class ProductActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelec
         setContentView(vb?.root)
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
-        drawer= vb?.drawerLayout!!
+        drawer = vb?.drawerLayout!!
         navigationView = vb?.navView!!
         val toggle = ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -45,20 +46,31 @@ class ProductActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelec
                 supportFragmentManager.beginTransaction().add(R.id.content_frame, riadovoiProkat)
                     .commit()
             }
+
+            2 -> {
+                val konstProkat = FragmentProkatKonstruktcionnyi()
+                supportFragmentManager.beginTransaction().add(R.id.content_frame, konstProkat)
+                    .commit()
+            }
         }
     }
-
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.item1 -> {
-Toast.makeText(this, "1", Toast.LENGTH_LONG).show()            }
+                startActivity(MainActivity.getStartIntent(this))
+                finish()
+            }
             R.id.item2 -> {
-                Toast.makeText(this, "1", Toast.LENGTH_LONG).show()
+                val riadovoiProkat = FragmentProkatRiadovoi()
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, riadovoiProkat)
+                    .commit()
 
             }
             R.id.item3 -> {
-                Toast.makeText(this, "2", Toast.LENGTH_LONG).show()
+                val konstProkat = FragmentProkatKonstruktcionnyi()
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, konstProkat)
+                    .commit()
 
             }
             R.id.item4 -> {
