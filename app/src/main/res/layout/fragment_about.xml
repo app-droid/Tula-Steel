@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.FragmentAbout">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_picture"
+        android:layout_width="490px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/about_back"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40px"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="О предприятии"/>
+
+    <LinearLayout
+        android:id="@+id/linear_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+        app:layout_constraintTop_toBottomOf="@id/tv_about"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin_average">
+        <TextView
+            android:id="@+id/tv_year"
+            style="@style/TextStyleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year"/>
+
+        <TextView
+            android:id="@+id/tv_month"
+            style="@style/TextStyleAbout.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month"/>
+
+        <TextView
+            android:id="@+id/tv_start"
+            style="@style/TextStyleAbout.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_moshchnost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/linear_year"
+        app:layout_constraintTop_toBottomOf="@id/tv_about"
+        android:layout_marginLeft="89px"
+        android:layout_marginTop="@dimen/top_margin_average">
+        <TextView
+            android:id="@+id/tv_amount"
+            style="@style/TextStyleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"/>
+
+        <TextView
+            android:id="@+id/tv_tonn"
+            style="@style/TextStyleAbout.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tonn" />
+
+        <TextView
+            android:id="@+id/tv_moshchnost"
+            style="@style/TextStyleAbout.Dark"
+            android:layout_width="494px"
+            android:layout_height="wrap_content"
+            android:text="@string/moshchnost"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/linear_moshchnost"
+        app:layout_constraintTop_toBottomOf="@id/tv_about"
+        android:layout_marginLeft="89px"
+        android:layout_marginTop="@dimen/top_margin_average">
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/TextStyleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"/>
+
+        <TextView
+            android:id="@+id/tv_sklad"
+            style="@style/TextStyleAbout.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sklad" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/TextStyleAbout.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_about"/>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linear_body"
+    android:layout_width="1318px"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+    app:layout_constraintTop_toBottomOf="@id/linear_moshchnost"
+    android:layout_marginTop="@dimen/top_margin_average"
+    android:layout_marginLeft="@dimen/side_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStyle"
+        android:textSize="28px"
+        android:text="@string/about_body1"
+        android:layout_marginTop="8px">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStyle"
+        android:textSize="28px"
+        android:text="@string/about_body2"
+        android:layout_marginTop="8px">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStyle"
+        android:textSize="28px"
+        android:text="@string/about_body3"
+        android:layout_marginTop="8px">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStyle"
+        android:textSize="28px"
+        android:layout_marginTop="8px"
+        android:text="@string/about_body4">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStyle"
+        android:textSize="28px"
+        android:layout_marginTop="8px"
+        android:text="@string/about_body5">
+
+    </TextView>
+
+</LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_schema"
+        android:layout_width="618px"
+        android:layout_height="116px"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+        app:layout_constraintTop_toBottomOf="@id/linear_body"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin_average"
+        android:backgroundTint="@color/card_blue_background"
+        android:text="@string/button_schema"
+        android:textColor="@color/black"
+        android:textSize="28px"
+        android:fontFamily="@font/roboto"
+        android:textStyle="normal"
+        android:textAllCaps="false"
+        app:cornerRadius="16px">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_pcd32"
+        android:layout_width="618px"
+        android:layout_height="116px"
+        app:layout_constraintStart_toEndOf="@id/button_schema"
+        app:layout_constraintTop_toBottomOf="@id/linear_body"
+        android:layout_marginLeft="82px"
+        android:layout_marginTop="@dimen/top_margin_average"
+        android:backgroundTint="@color/card_blue_background"
+        android:text="@string/button_open_svidetelstvo"
+        android:textColor="@color/black"
+        android:textSize="28px"
+        android:fontFamily="@font/roboto"
+        android:textStyle="normal"
+        android:textAllCaps="false"
+        app:cornerRadius="16px">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
