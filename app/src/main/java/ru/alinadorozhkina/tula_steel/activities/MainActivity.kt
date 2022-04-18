@@ -8,6 +8,12 @@ import ru.alinadorozhkina.tula_steel.adapter.BaseRVAdapter
 import ru.alinadorozhkina.tula_steel.databinding.ActivityMainBinding
 import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.*
+import android.content.Intent
+
+const val ProkatRiadovoi: Int = 1
+const val ProkatKonstrukchionnyi: Int = 2
+const val KvadratnaiaZagotovka: Int = 3
+
 
 class MainActivity : AppCompatActivity() {
     private var vb: ActivityMainBinding? = null
@@ -31,18 +37,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(vb?.root)
-        init()
+        initRV()
         initNavigation()
     }
 
     fun initNavigation () = with(vb) {
         this!!.menuRiadovoi.setOnClickListener {
-            startActivity(RiadovoiProkatActivity.getStartIntent(this@MainActivity))
-            finish()
+            intent(ProkatRiadovoi)
         }
     }
 
-    private fun init() = with(vb) {
+    private fun initRV() = with(vb) {
         this!!.rvAllProducts.adapter = BaseRVAdapter(
             allProducts,
             R.layout.item_card_main,
@@ -58,6 +63,12 @@ class MainActivity : AppCompatActivity() {
             tvTitle.text = data.name
             ivPicture.setImageResource(data.picture)
         }
+    }
+
+    private fun intent (id: Int) {
+        val intent = Intent(this, ProductActivity::class.java)
+        intent.putExtra("ID", id)
+        startActivity(intent)
     }
 
     override fun onDestroy() {

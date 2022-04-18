@@ -1,37 +1,28 @@
 package ru.alinadorozhkina.tula_steel.activities
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
-import ru.alinadorozhkina.tula_steel.databinding.ActivityMainBinding
-import ru.alinadorozhkina.tula_steel.databinding.ActivityRiadovoiProkatBinding
+import ru.alinadorozhkina.tula_steel.databinding.ActivityProductBinding
+import ru.alinadorozhkina.tula_steel.fragments.FragmentProkatRiadovoi
 
-class RiadovoiProkatActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
 
-    private var vb: ActivityRiadovoiProkatBinding? = null
+class ProductActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+
+    private var vb: ActivityProductBinding? = null
     private lateinit var drawer: DrawerLayout
     private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        vb = ActivityRiadovoiProkatBinding.inflate(layoutInflater)
+        vb = ActivityProductBinding.inflate(layoutInflater)
         setContentView(vb?.root)
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
@@ -44,6 +35,17 @@ class RiadovoiProkatActivity : AppCompatActivity(),NavigationView.OnNavigationIt
         toggle.syncState()
 
         navigationView.setNavigationItemSelectedListener(this)
+
+        val arguments = intent.extras
+        val id = arguments!!["ID"]
+
+        when (id) {
+            1 -> {
+                val riadovoiProkat = FragmentProkatRiadovoi()
+                supportFragmentManager.beginTransaction().add(R.id.content_frame, riadovoiProkat)
+                    .commit()
+            }
+        }
     }
 
 
@@ -82,9 +84,7 @@ Toast.makeText(this, "1", Toast.LENGTH_LONG).show()            }
         return true
     }
 
-
-
-    companion object {
-        fun getStartIntent(context: Context) = Intent(context, RiadovoiProkatActivity::class.java)
-    }
+//    companion object {
+//        fun getStartIntent(context: Context) = Intent(context, RiadovoiProkatActivity::class.java)
+//    }
 }
