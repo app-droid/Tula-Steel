@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TulaSteel">
         <activity
+            android:name=".activities.PictureActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
+        <activity
             android:name=".activities.ProductActivity"
             android:exported="true"
             android:label="@string/title_activity_riadovoi_prokat"

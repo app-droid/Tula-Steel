@@ -75,7 +75,7 @@
             android:background="@color/light_font_grey" />
 
         <TextView
-            android:id="@+id/about"
+            android:id="@+id/menu_about"
             style="@style/TextMenuStyle"
             android:text="@string/about"/>
 

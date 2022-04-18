@@ -14,6 +14,7 @@ import android.content.Intent
 const val ProkatRiadovoi: Int = 1
 const val ProkatKonstrukchionnyi: Int = 2
 const val KvadratnaiaZagotovka: Int = 3
+const val About: Int = 5
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
         this!!.menuKvadratnaia.setOnClickListener {
             intent(KvadratnaiaZagotovka)
+        }
+
+        this!!.menuAbout.setOnClickListener {
+            intent(About)
         }
     }
 
