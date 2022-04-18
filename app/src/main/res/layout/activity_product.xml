@@ -6,8 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="wrap_content"
-    tools:openDrawer="start">
+    android:layout_width="wrap_content">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -23,18 +22,16 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
-                android:layout_height="124px"
-                app:navigationIcon="@drawable/hamburger"
-                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
-                android:background="@color/blue_dark"
-                android:elevation="0dp">
+                android:layout_height="114px"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                android:background="@color/blue_dark">
 
                 <LinearLayout
                     android:id="@+id/contact_bar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_marginStart="410px"
+                    android:layout_marginStart="390px"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 

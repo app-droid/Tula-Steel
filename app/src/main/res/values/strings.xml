@@ -26,7 +26,7 @@
     <string name="production">ПРОДУКЦИЯ</string>
     <string name="title_riadovoi">Рядовой \nпрокат</string>
 
-    !-- Prokat_Riadovoi -->
+    !-- Prokat_Konstrukcionnyi -->
 
     <string name="prokat_konstrukchionnyi_body1">Конструкционный прокат используется для производства ответственных деталей различных машин и механизмов. Тула-Сталь выпускает круг горячекатаный в мотках диаметром 4,5-22 мм и в прутках диаметром 14-100 мм.</string>
     <string name="prokat_konstrukchionnyi_body2">Также предприятие может изготавливать шестигранник размером 15-40 мм, полосу горячекатаную шириной 25-150 мм и толщиной 4-60 м, квадрат горячекатаный со стороной от 12 до 40 мм.</string>
@@ -34,6 +34,12 @@
     <string name="diametr_konst">4,5 - 100 мм</string>
     <string name="title_konstrukchionnyi">Конструкционный \nпрокат</string>
 
+    !-- Kvadratnaia_Zagotovka -->
+    <string name="kvadratnaia_zagotovka_body1">Заготовка непрерывнолитая квадратного сечения производится путем разливки стали на машине непрерывного литья заготовок. Тула-Сталь может выпускать квадратную стальную заготовку c двумя размерами сторон: 150 и 180 мм. Длина заготовки составляет от 6 до 12 м.</string>
+    <string name="kvadratnaia_zagotovka_body2">Заготовка поставляется в связках или навалом поштучно, обвязка связок катанкой либо лентой, вес связок не более 13 тонн. Квадратная заготовка используется для изготовления сортового и конструкционного проката.</string>
+    <string name="dlina_kvadratnaia_zagotovka">6 - 12 м</string>
+    <string name="diametr_kvadratnaia_zagotovka">150 и 180 мм</string>
+    <string name="title_kvadratnaia_zagotovka">Квадратная \nзаготовка</string>
 
 
     !-- Menu -->

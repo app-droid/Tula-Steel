@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         this!!.menuKonstrukcionnyi.setOnClickListener {
             intent(ProkatKonstrukchionnyi)
         }
+
+        this!!.menuKvadratnaia.setOnClickListener {
+            intent(KvadratnaiaZagotovka)
+        }
     }
 
     private fun initRV() = with(vb) {

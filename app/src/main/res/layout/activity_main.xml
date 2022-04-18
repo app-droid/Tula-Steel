@@ -59,7 +59,7 @@
             android:text="@string/prokat_konstrukchionnyi"/>
 
         <TextView
-            android:id="@+id/kvadratnaia"
+            android:id="@+id/menu_kvadratnaia"
             style="@style/TextMenuStyle"
             android:text="@string/kvadratnaia_zagotovka"/>
 
