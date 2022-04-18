@@ -21,10 +21,18 @@
     !-- Prokat_Riadovoi -->
     <string name="prokat_riadovoi_body1">Арматура гладкая и арматура периодического профиля (рифленая) производятся в прутках и мотках. Данный вид продукции применяется для производства ЖБИ, армирования фундаментов, стен, усиления бетонных стяжек.</string>
     <string name="prokat_riadovoi_body2">Предприятие также производит двутавры стальные горячекатаные №№ 10-16, катанку диаметром 4,5-9 мм, уголки стальные горякатаные равнополочные №№ 25-125 и неравнополочные №№ 40-140 и швеллер №№ 5-16.</string>
-<string name="dlina">4 - 12 м</string>
+    <string name="dlina">4 - 12 м</string>
     <string name="diametr">6 - 40 мм</string>
     <string name="production">ПРОДУКЦИЯ</string>
-    <string name="title_riadovoi">РЯДОВОЙ \nПРОКАТ</string>
+    <string name="title_riadovoi">Рядовой \nпрокат</string>
+
+    !-- Prokat_Riadovoi -->
+
+    <string name="prokat_konstrukchionnyi_body1">Конструкционный прокат используется для производства ответственных деталей различных машин и механизмов. Тула-Сталь выпускает круг горячекатаный в мотках диаметром 4,5-22 мм и в прутках диаметром 14-100 мм.</string>
+    <string name="prokat_konstrukchionnyi_body2">Также предприятие может изготавливать шестигранник размером 15-40 мм, полосу горячекатаную шириной 25-150 мм и толщиной 4-60 м, квадрат горячекатаный со стороной от 12 до 40 мм.</string>
+    <string name="dlina_konst">4 - 12 м</string>
+    <string name="diametr_konst">4,5 - 100 мм</string>
+    <string name="title_konstrukchionnyi">Конструкционный \nпрокат</string>
 
 
 

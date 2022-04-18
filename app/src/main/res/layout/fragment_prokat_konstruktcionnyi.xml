@@ -20,7 +20,7 @@
         android:paddingTop="@dimen/top_margin"
         android:paddingLeft="@dimen/side_margin_average"
         android:paddingRight="@dimen/side_margin_average"
-        android:background="@drawable/prokat_riadovoi_back">
+        android:background="@drawable/prokat_konstr_back">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextHeaderStyle.ProductTitle"
-            android:text="@string/title_riadovoi"
+            android:text="@string/title_konstrukchionnyi"
             android:layout_marginTop="80px" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +87,7 @@
         android:layout_marginLeft="@dimen/side_margin"
         android:layout_marginRight="@dimen/side_margin"
         android:layout_marginTop="@dimen/top_margin"
-        android:text="@string/prokat_riadovoi_body1"
+        android:text="@string/prokat_konstrukchionnyi_body1"
         android:maxWidth="1318px"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
@@ -101,7 +101,7 @@
         android:layout_marginLeft="@dimen/side_margin"
         android:layout_marginRight="@dimen/side_margin"
         android:layout_marginTop="@dimen/top_margin_average"
-        android:text="@string/prokat_riadovoi_body2"
+        android:text="@string/prokat_konstrukchionnyi_body2"
         android:maxWidth="1318px"
         app:layout_constraintTop_toBottomOf="@id/body"
         app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
@@ -110,8 +110,8 @@
     <ImageView
         android:id="@+id/iv_schema"
         android:layout_width="1318px"
-        android:layout_height="106px"
-        android:src="@drawable/prokat_riadovoi_shema"
+        android:layout_height="132px"
+        android:src="@drawable/prokat_konstr_schema"
         app:layout_constraintTop_toBottomOf="@id/body2"
         app:layout_constraintStart_toEndOf="@id/linear_layout_side_menu"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +138,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/diametr"
+        android:text="@string/diametr_konst"
         android:textColor="@color/black"
         android:textSize="20px"
         app:layout_constraintStart_toEndOf="@id/iv_diametr"
@@ -165,7 +165,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/dlina"
+        android:text="@string/dlina_konst"
         android:textColor="@color/black"
         android:textSize="20px"
         app:layout_constraintStart_toEndOf="@id/iv_dlina"
@@ -173,7 +173,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_prokat_riadovoi"
+        android:id="@+id/rv_prokat_konstrukchionnyi"
         style="@style/RVStyle"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
