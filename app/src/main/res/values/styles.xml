@@ -19,6 +19,13 @@
         <item name="android:textColor">@color/light_font_grey</item>
     </style>
 
+    <style name="TextHeaderStyle.ProductTitle">
+        <item name="android:textColor">#F6F0F0</item>
+        <item name="android:textSize">48px</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="singleLine">false</item>
+    </style>
+
     <style name="TextBodyStyle">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/dark_font_grey</item>
@@ -41,6 +48,18 @@
 
     </style>
 
+    <style name="TextProductTitle">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#F6F0F0</item>
+        <item name="android:text">@string/production</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">32px</item>
+        <item name="android:layout_marginLeft">@dimen/left_margin</item>
+
+
+    </style>
+
 
     <style name="CardViewStyle">
         <item name="android:backgroundTint">@color/card_background</item>
@@ -49,6 +68,26 @@
     </style>
     <style name="CardViewStyle.Blue">
         <item name="android:backgroundTint">@color/card_blue_background</item>
+    </style>
+
+    <style name="AppNavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">@style/AppNavigationViewItemTextAppearance</item>
+
+    </style>
+    <style name="AppNavigationViewItemTextAppearance" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+    <item name="android:textSize">36px</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#F0F0F0</item>
+</style>
+
+    <style name="RVStyle">
+        <item name="android:layout_marginTop">@dimen/top_margin_average</item>
+        <item name="android:layout_marginBottom">@dimen/top_margin_average</item>
+        <item name="android:layout_marginLeft">@dimen/side_margin</item>
+        <item name="layoutManager">androidx.recyclerview.widget.GridLayoutManager</item>
+        <item name="spanCount">3</item>
+
     </style>
 
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="124px"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/contact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="510px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/telephone"
+            style="@style/TextContactStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28px"
+            android:text="@string/telephone_number" />
+
+        <TextView
+            android:id="@+id/email"
+            style="@style/TextContactStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="48px"
+
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/web"
+            style="@style/TextContactStyle"
+            android:layout_marginLeft="48px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/web" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/TextContactStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:singleLine="false"
+            android:layout_marginLeft="48px"
+            android:text="@string/address" />
+
+    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TulaSteel" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@color/window_background</item>
+        <item name="navigationViewStyle">@style/AppNavigationViewStyle</item>
+        <item name="listPreferredItemHeightSmall">116px</item>
 
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">#9A9797</item>
+        <item name="colorPrimaryVariant">@color/light_font_grey</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -17,4 +20,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.TulaSteel.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TulaSteel.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TulaSteel.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
