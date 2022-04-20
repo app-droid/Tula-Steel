@@ -44,7 +44,6 @@
             android:id="@+id/menu_main"
             style="@style/TextMenuStyle"
             android:layout_marginTop="@dimen/top_margin_average"
-            android:background="@color/menu_selected_grey"
             android:text="@string/main"
             tools:ignore="TextContrastCheck" />
 
@@ -80,7 +79,7 @@
             android:text="@string/about"/>
 
         <TextView
-            android:id="@+id/certificate"
+            android:id="@+id/menu_certificate"
             style="@style/TextMenuStyle"
             android:text="@string/certificates"/>
 

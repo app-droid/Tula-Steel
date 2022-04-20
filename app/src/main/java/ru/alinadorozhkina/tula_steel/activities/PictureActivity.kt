@@ -7,13 +7,14 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import ru.alinadorozhkina.tula_steel.databinding.ActivityPictureBinding
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductBinding
+import ru.alinadorozhkina.tula_steel.entities.AppEntity
 import ru.alinadorozhkina.tula_steel.entities.Picture
 
 class PictureActivity : AppCompatActivity() {
 
     private var vb: ActivityPictureBinding? = null
 
-    var picture: Picture? = null
+    var picture: AppEntity? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vb = ActivityPictureBinding.inflate(layoutInflater)

@@ -7,14 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.adapter.BaseRVAdapter
+import ru.alinadorozhkina.tula_steel.adapter.OnItemClickListener
 import ru.alinadorozhkina.tula_steel.databinding.FragmentProkatRiadovoiBinding
 import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.*
 
-class FragmentProkatRiadovoi : Fragment() {
+class FragmentProkatRiadovoi : Fragment(), OnItemClickListener {
 
     var vb: FragmentProkatRiadovoiBinding? = null
-    private val prokatRiadovoi: List<Product> = listOf(
+    private val prokatRiadovoi: List<AppEntity> = listOf(
         ArmaturaGladkaia(),
         ArmaturaPeriodicheskaia(),
         UgolokRapnopolochnyi(),
@@ -40,6 +41,7 @@ class FragmentProkatRiadovoi : Fragment() {
 
     private fun initRV() = with(vb) {
         this?.rvProkatRiadovoi?.adapter = BaseRVAdapter(
+            this@FragmentProkatRiadovoi,
             prokatRiadovoi,
             R.layout.item_card_main,
         )
@@ -48,11 +50,15 @@ class FragmentProkatRiadovoi : Fragment() {
         }
     }
 
-    private fun bind(view: View, data: Product) {
+    private fun bind(view: View, data: AppEntity) {
         val rvBinding = ItemCardMainBinding.bind(view)
         with(rvBinding) {
-            tvTitle.text = data.name
-            ivPicture.setImageResource(data.picture)
+            tvTitle.text = getString(data.title)
+            ivPicture.setImageResource(data.path)
         }
+    }
+
+    override fun onItemClick(entity: AppEntity) {
+        TODO("Not yet implemented")
     }
 }

@@ -15,6 +15,12 @@
         <item name="android:textSize">56px</item>
     </style>
 
+    <style name="TextHeaderStyle.Small">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">36px</item>
+    </style>
+
     <style name="TextHeaderStyle.Light">
         <item name="android:textColor">@color/light_font_grey</item>
     </style>
@@ -49,13 +55,14 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">32px</item>
         <item name="android:lineSpacingExtra">4dp</item>
+        <item name="singleLine">false</item>
     </style>
 
     <style name="TextMenuStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="fontFamily">@font/roboto</item>
-        <item name="android:textColor">@color/light_font_grey</item>
+        <item name="android:textColor">@drawable/text_color_selector</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">36px</item>
         <item name="android:paddingStart">@dimen/left_padding</item>
@@ -105,9 +112,32 @@
         <item name="layoutManager">androidx.recyclerview.widget.GridLayoutManager</item>
         <item name="spanCount">3</item>
 
+    </style><style name="RVStyle.Two">
+    <item name="spanCount">2</item>
+
+</style>
+
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">#FFAB00</item>
+        <item name="singleLine">false</item>
+        <item name="itemMaxLines">2</item>
     </style>
 
-
-
+    <style name="BasePopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">100px</item>
+        <item name="android:textColor">@color/dark_font_grey</item>
+        <item name="android:textSize">28px</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:singleLine">false</item>
+        <item name="itemMaxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
 
 </resources>

@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">Tula-Steel</string>
 
+    !-- Product -->
+    <string name="product_armatura_gladkaia">Арматура гладкая</string>
+    <string name="product_armatura_periodicheskaia">Арматура периодическая</string>
+    <string name="product_ugolok_ravnopolochnyi">Уголок равнополочный</string>
+    <string name="product_ugolok_neravnopolochnyi">Уголок неравнополочный</string>
+    <string name="product_shveller">Швеллер</string>
+    <string name="product_dvutavrovaia_balka">Двутавровая балка</string>
+    <string name="product_krug">Круг</string>
+    <string name="product_kvadrat">Квадрат</string>
+    <string name="product_shestigrannik">Шестигранник</string>
+    <string name="product_polosa">Полоса</string>
+    <string name="product_katanka">Катанка</string>
+    <string name="product_kvadratnaia_zagotovka">Заготовка непрерывнолитая квадратного сечения</string>
+
     !-- Contact bar -->
     <string name="telephone_number">+7(800) 700-43-63</string>
     <string name="email">tdts@metholding.com</string>
@@ -50,6 +64,8 @@
     <string name="about_body5">В радиусе 1000 км от Тулы возводится 45% жилья в России и расположено более 200 машиностроительных кластеров и индустриальных парков.</string>
     <string name="button_schema">Открыть схему производства</string>
     <string name="button_open_svidetelstvo">Открыть свидетельство о признании производителя РСD 32</string>
+    <string name="about_schema">Схема производства</string>
+    <string name="about_РСD_32">Свидетельство о признании производителя РСD 32</string>
     <string name="year">2019</string>
     <string name="month">июль</string>
     <string name="start">Начало работы предприятия</string>
@@ -60,6 +76,59 @@
     <string name="sklad">cкладской комплекс</string>
     <string name="address_about">ул. Пржевальского, д. 2</string>
 
+    !-- Certificates -->
+    <string name="certificates_title">Сертификаты соответствия на готовую продукцию</string>
+    <string name="certificates_34028_2016">Сертификаты на внутренний рынок на арматурный прокат по ГОСТ 34028-2016</string>
+    <string name="certificates_57814_82">Сертификаты на внутренний рынок на арматурный прокат по ГОСТ 57814-82</string>
+    <string name="certificates_belarus">Сертификаты на Белорусский рынок на арматурный прокат по ГОСТ 34028-2016</string>
+    <string name="certificates_europe">Сертификаты на Европейский рынок на арматурный прокат по национальным стандартам</string>
+    <string name="certificates_choose">Выберите сертификат</string>
+    <string name="certificates_1.1">Прокат арматурный А500, А500С, А500СН, А500СНУ, А500СНУК диаметром 8-40 м в прутках, 6-16 мм в мотках \n(НИЦ Строительство)</string>
+    <string name="certificates_1.2">Прокат арматурный А500СЕ, А500СЕУ, А500СЕУК диаметром 8-40 м в прутках, 6-16 мм в мотках \n(НИЦ Строительство)</string>
+    <string name="certificates_1.3">Прокат арматурный А600С, А600СН, А600СНУ диаметром 8-40 м в прутках, 6-16 мм в мотках \n(НИЦ Строительство)</string>
+    <string name="certificates_1.4">Прокат арматурный А400 и А400С в прутках диаметром 8-40 мм и в мотках диаметром 6-16 мм \n(НИЦ Строительство)</string>
+    <string name="certificates_1.5">Прокат арматурный А240С диаметром 8-40 мм в прутках и диаметром 6-16 в мотках \n(НИЦ Строительство)</string>
+    <string name="certificates_1.6">Прокат арматурный А800 диаметром 10-18 мм по ГОСТ 34028-2016 \n(НИЦ Строительство)</string>
+    <string name="certificates_2.1">Прокат арматурный А-III (А400) в прутках диаметром 8-32 мм и в мотках диаметром 6-10 мм по ГОСТ 5781-82 \n(НИЦ Строительство)</string>
+    <string name="certificates_3.1">Прокат арматурный периодического профиля А500С диаметром 8-40 мм в прутках \n(ООО БелСтандартЦентр)</string>
+    <string name="certificates_3.2">Прокат арматурный А500С, А500СН, А500СНУ диаметрами 6, 8, 10, 12 в мотках по ГОСТ 34028-2016 \n(ООО БелСтандартЦентр)</string>
+    <string name="certificates_3.3">Прокат арматурный А240С диаметром 6, 8, 10, 12 мм в мотках \n(ООО БелСтандартЦентр)</string>
+    <string name="certificates_4.1">Прокат арматурный B500B диаметром 8-40 мм в прутках по DIN 488-2009 DE \n(Германия)</string>
+    <string name="certificates_4.2">Прокат арматурный B500B диаметром 8-40 мм в прутках по CSN 42 0139 \n(Чехия)</string>
+    <string name="certificates_4.3">Прокат арматурный B500B диаметром 8-40 мм в прутках по SK TP-20_0043 EN \n(ТИИГС, Словакия)</string>
+    <string name="certificates_4.4">Прокат арматурный B500B диаметром 8-40 мм в прутках по DIN 488-2009 \n(Румыния)</string>
+    <string name="certificates_4.5">Прокат арматурный B500B диаметром 8-40 мм в прутках по SFS 1300-2020 \n(Финляндия)</string>
+    <string name="certificates_4.6">Прокат арматурный K500B-T диаметром 8-40 мм в прутках по SS 212540-2014 \n(Швеция)</string>
+    <string name="certificates_4.7">Прокат арматурный B500B диаметром 8-40 мм в прутках по DS-EN 1992-1-1-2004 \n(Дания)</string>
+
+
+    <string-array name="certificates_34028_2016">
+        <item>@string/certificates_1.1</item>
+        <item>@string/certificates_1.2</item>
+        <item>@string/certificates_1.3</item>
+        <item>@string/certificates_1.4</item>
+        <item>@string/certificates_1.5</item>
+        <item>@string/certificates_1.6</item>
+    </string-array>
+
+    <string-array name="certificates_57814_82">
+        <item>@string/certificates_2.1</item>
+    </string-array>
+
+    <string-array name="certificates_belarus">
+        <item>@string/certificates_3.1</item>
+        <item>@string/certificates_3.2</item>
+        <item>@string/certificates_3.3</item>
+    </string-array>
+
+    <string-array name="certificates_europe">
+        <item>@string/certificates_4.1</item>
+        <item>@string/certificates_4.2</item>
+        <item>@string/certificates_4.3</item>
+        <item>@string/certificates_4.3</item>
+        <item>@string/certificates_4.3</item>
+        <item>@string/certificates_4.3</item>
+    </string-array>
 
     !-- Menu -->
 

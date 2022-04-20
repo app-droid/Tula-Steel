@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.FragmentCertificates">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_picture"
+        android:layout_width="480px"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_back"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_certificates_34028_2016"
+            style="@style/TextMenuStyle"
+            android:layout_marginTop="47px"
+            android:paddingEnd="12px"
+            android:paddingTop="0px"
+            android:textColor="@drawable/text_color_selector"
+            android:text="@string/certificates_34028_2016"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="490px"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/top_margin_average"
+            android:background="@color/light_font_grey" />
+
+        <TextView
+            android:id="@+id/tv_certificates_57814_82"
+            style="@style/TextMenuStyle"
+            android:textSize="32px"
+            android:paddingEnd="12px"
+            android:clickable="true"
+            android:textColor="@drawable/text_color_selector"
+            android:text="@string/certificates_34028_2016" />
+
+        <View
+            android:layout_width="490px"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/top_margin_average"
+            android:background="@color/light_font_grey" />
+
+        <TextView
+            android:id="@+id/tv_certificates_belarus"
+            style="@style/TextMenuStyle"
+            android:textSize="32px"
+            android:paddingEnd="12px"
+            android:textColor="@drawable/text_color_selector"
+            android:text="@string/certificates_belarus" />
+
+        <View
+            android:layout_width="490px"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/top_margin_average"
+            android:background="@color/light_font_grey" />
+
+        <TextView
+            android:id="@+id/tv_certificates_europe"
+            style="@style/TextMenuStyle"
+            android:textSize="32px"
+            android:paddingEnd="12px"
+            android:textColor="@drawable/text_color_selector"
+            android:text="@string/certificates_europe" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_certificate_title"
+        style="@style/TextHeaderStyle.Small"
+        android:layout_width="1318px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/certificates_34028_2016"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_certificate"
+        style="@style/RVStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+        app:layout_constraintTop_toBottomOf="@id/tv_certificate_title"
+        tools:listitem="@layout/item_certificate_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
