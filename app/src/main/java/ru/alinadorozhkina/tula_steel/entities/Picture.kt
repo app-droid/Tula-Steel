@@ -4,19 +4,20 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 import ru.alinadorozhkina.tula_steel.R
 
-interface Picture {
-    val title: String
-    val path: Int
-}
+@Parcelize
+data class Picture(
+    override val title: Int,
+    override val path: Int
+): AppEntity, Parcelable
 
 @Parcelize
 data class ProductionPlan(
-    override val title: String = "Схема производства",
+    override val title: Int = R.string.about_schema,
     override val path: Int = R.drawable.production_plan
-): Picture, Parcelable
+): AppEntity, Parcelable
 
 @Parcelize
 data class PCD32(
-    override val title: String = "Свидетельство о признании производителя РСD 32",
+    override val title: Int = R.string.about_РСD_32,
     override val path: Int = R.drawable.pcd32
-): Picture, Parcelable
+): AppEntity, Parcelable

@@ -4,12 +4,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ru.alinadorozhkina.tula_steel.entities.Product
+import ru.alinadorozhkina.tula_steel.entities.AppEntity
+
+interface OnItemClickListener {
+    fun onItemClick(entity: AppEntity)
+}
 
 class BaseRVAdapter(
-    private val products: List<Product>,
+    private val onItemClickListener: OnItemClickListener,
+    private val products: List<AppEntity>,
     private val itemLayoutId: Int,
-    private val bind: ((View, data: Product) -> Unit)
+    private val bind: ((View, data: AppEntity) -> Unit)
 ) : RecyclerView.Adapter<BaseRVAdapter.BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
@@ -27,8 +32,11 @@ class BaseRVAdapter(
     inner class BaseViewHolder(private val root: View) : RecyclerView.ViewHolder(root) {
         //private val ui: ItemCardBinding = ItemCardBinding.bind(root)
 
-        fun bind(product: Product) {
+        fun bind(product: AppEntity) {
             bind(root, product)
+            root.setOnClickListener {
+                onItemClickListener.onItemClick(product)
+            }
         }
     }
 }

@@ -10,17 +10,20 @@ import ru.alinadorozhkina.tula_steel.databinding.ActivityMainBinding
 import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.*
 import android.content.Intent
+import android.widget.Toast
+import ru.alinadorozhkina.tula_steel.adapter.OnItemClickListener
 
 const val ProkatRiadovoi: Int = 1
 const val ProkatKonstrukchionnyi: Int = 2
 const val KvadratnaiaZagotovka: Int = 3
 const val About: Int = 5
+const val Certificates: Int = 6
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClickListener {
     private var vb: ActivityMainBinding? = null
 
-    private val allProducts: List<Product> = listOf(
+    private val allProducts: List<AppEntity> = listOf(
         ArmaturaGladkaia(),
         ArmaturaPeriodicheskaia(),
         UgolokRapnopolochnyi(),
@@ -59,10 +62,15 @@ class MainActivity : AppCompatActivity() {
         this!!.menuAbout.setOnClickListener {
             intent(About)
         }
+
+        this!!.menuCertificate.setOnClickListener {
+            intent(Certificates)
+        }
     }
 
     private fun initRV() = with(vb) {
         this!!.rvAllProducts.adapter = BaseRVAdapter(
+            this@MainActivity,
             allProducts,
             R.layout.item_card_main,
         )
@@ -71,11 +79,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun bind(view: View, data: Product) {
+    private fun bind(view: View, data: AppEntity) {
         val rvBinding = ItemCardMainBinding.bind(view)
         with(rvBinding) {
-            tvTitle.text = data.name
-            ivPicture.setImageResource(data.picture)
+            tvTitle.text = getString(data.title)
+            ivPicture.setImageResource(data.path)
         }
     }
 
@@ -92,5 +100,9 @@ class MainActivity : AppCompatActivity() {
 
         companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
+    }
+
+    override fun onItemClick(entity: AppEntity) {
+        Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
     }
 }

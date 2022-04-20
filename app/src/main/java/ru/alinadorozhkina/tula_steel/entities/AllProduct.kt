@@ -2,67 +2,67 @@ package ru.alinadorozhkina.tula_steel.entities
 
 import ru.alinadorozhkina.tula_steel.R
 
-interface Product {
-    val name: String
-    val picture: Int
+interface AppEntity {
+    val title: Int
+    val path: Int
 }
 
 data class ArmaturaGladkaia(
-    override val name: String = "Арматура гладкая",
-    override val picture: Int = R.drawable.armatura_gladkaia
-) : Product
+    override val title: Int = R.string.product_armatura_gladkaia,
+    override val path: Int = R.drawable.armatura_gladkaia
+) : AppEntity
 
 data class ArmaturaPeriodicheskaia(
-    override val name: String = "Арматура периодическая",
-    override val picture: Int = R.drawable.armatura_periodicheskaia
-) : Product
+    override val title: Int = R.string.product_armatura_periodicheskaia,
+    override val path: Int = R.drawable.armatura_periodicheskaia
+) : AppEntity
 
 data class UgolokRapnopolochnyi(
-    override val name: String = "Уголок равнополочный",
-    override val picture: Int = R.drawable.ugolok_ravnopolochnyi
-) : Product
+    override val title: Int = R.string.product_ugolok_ravnopolochnyi,
+    override val path: Int = R.drawable.ugolok_ravnopolochnyi
+) : AppEntity
 
 data class UgolokNerapnopolochnyi(
-    override val name: String = "Уголок неравнополочный",
-    override val picture: Int = R.drawable.ugolok_neravnopolochnyi
-) : Product
+    override val title: Int = R.string.product_ugolok_neravnopolochnyi,
+    override val path: Int = R.drawable.ugolok_neravnopolochnyi
+) : AppEntity
 
 data class Shveller(
-    override val name: String = "Швеллер",
-    override val picture: Int = R.drawable.shveller
-) : Product
+    override val title: Int = R.string.product_shveller,
+    override val path: Int = R.drawable.shveller
+) : AppEntity
 
 data class Dvutavra(
-    override val name: String = "Двутавровая балка",
-    override val picture: Int = R.drawable.dvutavrovaia_balka
-) : Product
+    override val title: Int = R.string.product_dvutavrovaia_balka,
+    override val path: Int = R.drawable.dvutavrovaia_balka
+) : AppEntity
 
 data class Krug(
-    override val name: String = "Круг",
-    override val picture: Int = R.drawable.krug
-) : Product
+    override val title: Int = R.string.product_krug,
+    override val path: Int = R.drawable.krug
+) : AppEntity
 
 data class Kvadrat(
-    override val name: String = "Квадрат",
-    override val picture: Int = R.drawable.kvadrat
-) : Product
+    override val title: Int = R.string.product_kvadrat,
+    override val path: Int = R.drawable.kvadrat
+) : AppEntity
 
 data class Shestigrannik(
-    override val name: String = "Шестигранник",
-    override val picture: Int = R.drawable.shestigrannik
-) : Product
+    override val title: Int = R.string.product_shestigrannik,
+    override val path: Int = R.drawable.shestigrannik
+) : AppEntity
 
 data class Polosa(
-    override val name: String = "Полоса",
-    override val picture: Int = R.drawable.polosa
-) : Product
+    override val title: Int = R.string.product_polosa,
+    override val path: Int = R.drawable.polosa
+) : AppEntity
 
 data class Katanka(
-    override val name: String = "Катанка",
-    override val picture: Int = R.drawable.katanka
-) : Product
+    override val title: Int = R.string.product_katanka,
+    override val path: Int = R.drawable.katanka
+) : AppEntity
 
 data class KvadratnaiaZagotovka(
-    override val name: String = "Заготовка непрерывнолитая квадратного сечения",
-    override val picture: Int = R.drawable.kvadratnaia_zagotovka
-) : Product
+    override val title: Int = R.string.product_kvadratnaia_zagotovka,
+    override val path: Int = R.drawable.kvadratnaia_zagotovka
+) : AppEntity

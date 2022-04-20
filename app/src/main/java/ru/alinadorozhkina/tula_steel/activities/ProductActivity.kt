@@ -11,10 +11,7 @@ import androidx.core.view.GravityCompat
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductBinding
-import ru.alinadorozhkina.tula_steel.fragments.FragmentAbout
-import ru.alinadorozhkina.tula_steel.fragments.FragmentKvadratnaiaZagotovka
-import ru.alinadorozhkina.tula_steel.fragments.FragmentProkatKonstruktcionnyi
-import ru.alinadorozhkina.tula_steel.fragments.FragmentProkatRiadovoi
+import ru.alinadorozhkina.tula_steel.fragments.*
 
 
 class ProductActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -68,6 +65,14 @@ class ProductActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                     .commit()
 
             }
+
+            6 -> {
+                val certificate = FragmentCertificates()
+                supportFragmentManager.beginTransaction().add(R.id.content_frame, certificate)
+                    .commit()
+
+            }
+
         }
     }
 
@@ -106,7 +111,9 @@ class ProductActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             }
 
             R.id.item7 -> {
-                Toast.makeText(this, "7", Toast.LENGTH_LONG).show()
+                val certificate = FragmentCertificates()
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, certificate)
+                    .commit()
 
             }
         }
