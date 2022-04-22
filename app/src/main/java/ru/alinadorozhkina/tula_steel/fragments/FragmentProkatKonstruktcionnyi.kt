@@ -20,10 +20,10 @@ class FragmentProkatKonstruktcionnyi : Fragment(), OnItemClickListener {
     var vb: FragmentProkatKonstruktcionnyiBinding? = null
 
     private val prokatKonstruktcionnyi: List<AppEntity> = listOf(
-        Krug(),
-        Kvadrat(),
-        Shestigrannik(),
-        Polosa()
+//        Krug(),
+//        Kvadrat(),
+//        Shestigrannik(),
+//        Polosa()
     )
 
     override fun onCreateView(

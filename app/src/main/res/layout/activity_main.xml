@@ -50,22 +50,22 @@
         <TextView
             android:id="@+id/menu_riadovoi"
             style="@style/TextMenuStyle"
-            android:text="@string/prokat_riadovoi"/>
+            android:text="ggg"/>
 
         <TextView
             android:id="@+id/menu_konstrukcionnyi"
             style="@style/TextMenuStyle"
-            android:text="@string/prokat_konstrukchionnyi"/>
+            android:text="ggg"/>
 
         <TextView
             android:id="@+id/menu_kvadratnaia"
             style="@style/TextMenuStyle"
-            android:text="@string/kvadratnaia_zagotovka"/>
+            android:text="ggg"/>
 
         <TextView
             android:id="@+id/katanka"
             style="@style/TextMenuStyle"
-            android:text="@string/katanka"/>
+            android:text="ggg"/>
 
         <View
             android:layout_width="490px"

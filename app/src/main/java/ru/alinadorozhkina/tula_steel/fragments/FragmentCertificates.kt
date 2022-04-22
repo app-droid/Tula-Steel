@@ -123,7 +123,7 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
 
     override fun onItemClick(entity: AppEntity) {
         val intent = Intent(activity, PictureActivity::class.java)
-        intent.putExtra("Picture", Picture(entity.title, entity.path))
+        intent.putExtra("Picture", Picture(entity.id,entity.title, entity.path))
         startActivity(intent)
     }
 }

@@ -12,13 +12,12 @@ import ru.alinadorozhkina.tula_steel.adapter.OnItemClickListener
 import ru.alinadorozhkina.tula_steel.databinding.FragmentKvadratnaiaZagotovkaBinding
 import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.AppEntity
-import ru.alinadorozhkina.tula_steel.entities.KvadratnaiaZagotovka
 
 class FragmentKvadratnaiaZagotovka : Fragment(), OnItemClickListener {
 
     private var vb: FragmentKvadratnaiaZagotovkaBinding? = null
     private val kvadratnaiaZagotovka:List<AppEntity> = listOf(
-        KvadratnaiaZagotovka()
+        //KvadratnaiaZagotovka()
     )
 
     override fun onCreateView(

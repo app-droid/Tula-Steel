@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_card_view"
+    style="@style/CardViewStyleMainCategory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blue_dark"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_our_production"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/our_prodaction"
+            android:textSize="32sp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/light_font_grey"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_body_production"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_body_text"
+            android:textSize="22sp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/light_font_grey"
+            android:textStyle="normal"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_gravity="end">
+
+        </ImageView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

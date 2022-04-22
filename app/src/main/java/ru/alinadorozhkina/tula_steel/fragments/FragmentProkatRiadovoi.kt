@@ -16,12 +16,12 @@ class FragmentProkatRiadovoi : Fragment(), OnItemClickListener {
 
     var vb: FragmentProkatRiadovoiBinding? = null
     private val prokatRiadovoi: List<AppEntity> = listOf(
-        ArmaturaGladkaia(),
-        ArmaturaPeriodicheskaia(),
-        UgolokRapnopolochnyi(),
-        UgolokNerapnopolochnyi(),
-        Shveller(),
-        Dvutavra()
+//        ArmaturaGladkaia(),
+//        ArmaturaPeriodicheskaia(),
+//        UgolokRapnopolochnyi(),
+//        UgolokNerapnopolochnyi(),
+//        Shveller(),
+//        Dvutavra()
     )
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
