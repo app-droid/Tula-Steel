@@ -16,8 +16,6 @@ import ru.alinadorozhkina.tula_steel.fragments.*
 class ProductActivity : AppCompatActivity() {
 
     private var vb: ActivityProductLayoutBinding? = null
-
-
     private val tovarnaiaZagotovka: TovarnaiaZagotovka = TovarnaiaZagotovka()
     private val katanka: Katanka_ = Katanka_()
     private val sortovoiProkat: SortovoiProkat = SortovoiProkat()
@@ -28,16 +26,18 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityProductLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
+        setUpToolbar()
+        val arguments = intent.extras
+        setUpViewPager(arguments!!["ID"])
+    }
+
+    private fun setUpToolbar() {
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
         toolbar!!.setNavigationOnClickListener {
+            MainActivity.getStartIntent(this)
             finish()
         }
-
-        val arguments = intent.extras
-
-        setUpViewPager(arguments!!["ID"])
-
     }
 
     private fun setUpViewPager(id: Any?) {
@@ -49,7 +49,7 @@ class ProductActivity : AppCompatActivity() {
                     dataFragments.add(BaseFragment.newInstance(it))
                 }
                 vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
             2 -> {
@@ -58,7 +58,7 @@ class ProductActivity : AppCompatActivity() {
                     dataFragments.add(BaseFragment.newInstance(it))
                 }
                 vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
                 vb?.labelHeader?.text = getString(katanka.title)
             }
@@ -69,7 +69,7 @@ class ProductActivity : AppCompatActivity() {
                     dataFragments.add(BaseFragment.newInstance(it))
                 }
                 vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
             4 -> vb?.labelHeader?.text = getString(armaturnyiProkat.title)
@@ -81,111 +81,17 @@ class ProductActivity : AppCompatActivity() {
                     dataFragments.add(BaseFragment.newInstance(it))
                 }
                 vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
-            6 -> { }
+            6 -> {
+            }
         }
     }
 
-//        val toolbar: MaterialToolbar? = vb?.topAppBar
-//        setSupportActionBar(toolbar)
-//        drawer = vb?.drawerLayout!!
-//        navigationView = vb?.navView!!
-//        val toggle = ActionBarDrawerToggle(
-//            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-//        )
-//        drawer.addDrawerListener(toggle)
-//        toggle.syncState()
-//
-//        navigationView.setNavigationItemSelectedListener(this)
-//
-//        val arguments = intent.extras
-//        val id = arguments!!["ID"]
-//
-//        when (id) {
-//            1 -> {
-//                val riadovoiProkat = FragmentProkatRiadovoi()
-//                supportFragmentManager.beginTransaction().add(R.id.content_frame, riadovoiProkat)
-//                    .commit()
-//            }
-//
-//            2 -> {
-//                val konstProkat = FragmentProkatKonstruktcionnyi()
-//                supportFragmentManager.beginTransaction().add(R.id.content_frame, konstProkat)
-//                    .commit()
-//            }
-//
-//            3 -> {
-//                val kvadratnaia = FragmentKvadratnaiaZagotovka()
-//                supportFragmentManager.beginTransaction().add(R.id.content_frame, kvadratnaia)
-//                    .commit()
-//
-//            }
-//
-//            5 -> {
-//                val about = FragmentAbout()
-//                supportFragmentManager.beginTransaction().add(R.id.content_frame, about)
-//                    .commit()
-//
-//            }
-//
-//            6 -> {
-//                val certificate = FragmentCertificates()
-//                supportFragmentManager.beginTransaction().add(R.id.content_frame, certificate)
-//                    .commit()
-//
-//            }
-//
-//        }
+    override fun onDestroy() {
+        super.onDestroy()
+        vb = null
     }
+}
 
-//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.item1 -> {
-//                startActivity(MainActivity.getStartIntent(this))
-//                finish()
-//            }
-//            R.id.item2 -> {
-//                val riadovoiProkat = FragmentProkatRiadovoi()
-//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, riadovoiProkat)
-//                    .commit()
-//
-//            }
-//            R.id.item3 -> {
-//                val konstProkat = FragmentProkatKonstruktcionnyi()
-//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, konstProkat)
-//                    .commit()
-//
-//            }
-//            R.id.item4 -> {
-//                val kvadratnaia = FragmentKvadratnaiaZagotovka()
-//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, kvadratnaia)
-//                    .commit()
-//
-//            }
-//            R.id.item5 -> {
-//                Toast.makeText(this, "5", Toast.LENGTH_LONG).show()
-//
-//            }
-//            R.id.item6 -> {
-//                val about = FragmentAbout()
-//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, about)
-//                    .commit()
-//            }
-//
-//            R.id.item7 -> {
-//                val certificate = FragmentCertificates()
-//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, certificate)
-//                    .commit()
-//
-//            }
-//        }
-//
-//        drawer.closeDrawer(GravityCompat.START)
-//        return true
-//    }
-
-//    companion object {
-//        fun getStartIntent(context: Context) = Intent(context, RiadovoiProkatActivity::class.java)
-//    }

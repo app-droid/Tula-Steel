@@ -101,6 +101,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
         return true
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        vb = null
+    }
+
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
