@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import ru.alinadorozhkina.tula_steel.R
-import ru.alinadorozhkina.tula_steel.adapter.BaseRVAdapter
-import ru.alinadorozhkina.tula_steel.databinding.ActivityMainBinding
-import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.*
 import android.content.Intent
 import android.view.MenuItem
