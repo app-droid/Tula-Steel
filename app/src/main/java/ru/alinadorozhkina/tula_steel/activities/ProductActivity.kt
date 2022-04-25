@@ -22,13 +22,7 @@ class ProductActivity : AppCompatActivity() {
     private val katanka: Katanka_ = Katanka_()
     private val sortovoiProkat: SortovoiProkat = SortovoiProkat()
     private val armaturnyiProkat: ArmaturnyiProkat = ArmaturnyiProkat()
-
     private val fasonnyiProkat: FasonnyiProkat = FasonnyiProkat()
-    private val fasonnyiProkatProducts: List<Product> = fasonnyiProkat.products
-
-
-//    private lateinit var drawer: DrawerLayout
-//    private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,30 +34,58 @@ class ProductActivity : AppCompatActivity() {
             finish()
         }
 
-
         val arguments = intent.extras
 
-        when (arguments!!["ID"]) {
-            1 -> vb?.labelHeader?.text = getString(tovarnaiaZagotovka.title)
-            2 -> vb?.labelHeader?.text = getString(katanka.title)
-            3 -> vb?.labelHeader?.text = getString(sortovoiProkat.title)
-            4 -> vb?.labelHeader?.text = getString(armaturnyiProkat.title)
-           5 -> {
-               vb?.labelHeader?.text = getString(fasonnyiProkat.title)
+        setUpViewPager(arguments!!["ID"])
+
+    }
+
+    private fun setUpViewPager(id: Any?) {
+        when (id) {
+            1 -> {
+                vb?.labelHeader?.text = getString(tovarnaiaZagotovka.title)
                 val dataFragments: MutableList<Fragment> = mutableListOf()
-                fasonnyiProkatProducts.forEach {
+                tovarnaiaZagotovka.products.forEach {
                     dataFragments.add(BaseFragment.newInstance(it))
                 }
                 vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(255,0,255,0)
+                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+            }
+            2 -> {
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                katanka.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+                vb?.labelHeader?.text = getString(katanka.title)
+            }
+            3 -> {
+                vb?.labelHeader?.text = getString(sortovoiProkat.title)
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                sortovoiProkat.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155,0,155,0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+            }
+            4 -> vb?.labelHeader?.text = getString(armaturnyiProkat.title)
+
+            5 -> {
+                vb?.labelHeader?.text = getString(fasonnyiProkat.title)
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                fasonnyiProkat.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155,0,155,0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
             6 -> { }
         }
-    }
-
-    private fun setUpViewPager() {
-
     }
 
 //        val toolbar: MaterialToolbar? = vb?.topAppBar

@@ -34,6 +34,16 @@ data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
     override val path: Int = R.drawable.category_tovarnaia_zagotovka,
+    val products: List<Product> = listOf(
+        Product(
+            itemLayoutId = R.layout.kvadratnaia_zagotovka_include_layout,
+            title = R.string.Tovarnaia_zagotovka_title,
+            description = R.string.Tovarnaia_zagotovka_description,
+            picture = R.drawable.tovarnaia_zagotovka,
+            marochnyiAssortiment = R.string.Tovarnaia_zagotovka_marochnyi_assortiment,
+            upakovka = R.string.Tovarnaia_zagotovka_upakovki
+        )
+    )
 
 ) : AppEntity
 
@@ -42,6 +52,15 @@ data class Katanka_(
     override val id: Int = 2,
     override val title: Int = R.string.category_katanka,
     override val path: Int = R.drawable.category_katanka,
+    val products: List<Product> = listOf(
+        Product(
+            itemLayoutId =R.layout.katanka_include_layout,
+            picture = R.drawable.katanka_pic,
+            title = R.string.Katanka_title,
+            description = R.string.Katanka_description,
+            upakovka = R.string.Katanka_upakovki
+        )
+    )
 ) : AppEntity, Parcelable
 
 @Parcelize
@@ -49,6 +68,38 @@ data class SortovoiProkat(
     override val id: Int = 3,
     override val title: Int = R.string.category_sortovoi_prokat,
     override val path: Int = R.drawable.category_sortovoi_prokat,
+    val products: List<Product> = listOf(
+        Product(
+            picture = R.drawable.krug_picture,
+            title = R.string.Krug_title,
+            description = R.string.Krug_description,
+            upakovka = R.string.Krug_upakovki,
+            marochnyiAssortiment = R.string.Krug_marochnyi_assortiment,
+            itemLayoutId = R.layout.krug_include_layout),
+        Product(
+            picture = R.drawable.polosa_picture,
+            title = R.string.Polosa_title,
+            description = R.string.Krug_description,
+            upakovka = R.string.Krug_upakovki,
+            marochnyiAssortiment = R.string.Krug_marochnyi_assortiment,
+            itemLayoutId = R.layout.polosa_include_layout),
+        Product(
+            picture = R.drawable.shestigrannik,
+            title = R.string.Shestigrannik_title,
+            description = R.string.Shestigrannik_description,
+            marochnyiAssortiment = R.string.Shestigrannik_marochnyi_assortiment,
+            upakovka = R.string.Shestigrannik_upakovki,
+            itemLayoutId = R.layout.shestigrannik_include_layout
+        ),
+        Product(
+            picture = R.drawable.kvadrat,
+            title = R.string.Kvadrat_title,
+            marochnyiAssortiment = R.string.Kvadrat_marochnyi_assortiment,
+            upakovka = R.string.Kvadrat_upakovki,
+            itemLayoutId = R.layout.kvadrat_include_layout,
+            description = R.string.Kvadrat_description
+        )
+    )
 ) : AppEntity, Parcelable
 
 @Parcelize
@@ -56,6 +107,7 @@ data class ArmaturnyiProkat(
     override val id: Int = 4,
     override val title: Int = R.string.category_armaturnyi_prokat,
     override val path: Int = R.drawable.category_armaturnyi_prokat,
+    val products: List<Product> = listOf()
 ) : AppEntity, Parcelable
 
 @Parcelize
