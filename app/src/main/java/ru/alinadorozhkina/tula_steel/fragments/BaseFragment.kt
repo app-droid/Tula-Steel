@@ -5,9 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isGone
-import ru.alinadorozhkina.tula_steel.R
-import ru.alinadorozhkina.tula_steel.databinding.FragmentAboutBinding
 import ru.alinadorozhkina.tula_steel.databinding.FragmentDetailedProductBinding
 import ru.alinadorozhkina.tula_steel.entities.Product
 
@@ -38,7 +35,7 @@ class BaseFragment : Fragment() {
             vb?.layoutStub?.layoutResource = product.itemLayoutId
             vb?.layoutStub?.inflate()
 
-            product.marki?.let {
+            product.marochnyiAssortiment?.let {
                 vb?.tvMarkaValue?.text = getString(it)  } ?: vb?.linearForMainContent?.removeViews(4, 2)
 
             vb?.tvUpakovkaValue?.text = getString(product.upakovka)

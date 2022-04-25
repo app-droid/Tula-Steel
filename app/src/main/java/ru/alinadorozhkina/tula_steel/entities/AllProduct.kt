@@ -16,7 +16,7 @@ data class Product (
     val title: Int,
     val description: Int? = null,
     val itemLayoutId: Int,
-    val marki: Int? = null,
+    val marochnyiAssortiment: Int? = null,
     val upakovka: Int
 ): Parcelable
 
@@ -34,14 +34,7 @@ data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
     override val path: Int = R.drawable.category_tovarnaia_zagotovka,
-    val products: List<Product> = listOf(
-        Product(itemLayoutId = R.layout.shveller_include_layout,
-            picture = R.drawable.product_shveller,
-            title = R.string.shveller_title,
-            description = R.string.shveller_description,
-            upakovka = R.string.shveller_upakovki,
-           marki = R.string.shveller_marki)
-    )
+
 ) : AppEntity
 
 @Parcelize
@@ -70,6 +63,37 @@ data class FasonnyiProkat(
     override val id: Int = 5,
     override val title: Int = R.string.category_fasonnyi_prokat,
     override val path: Int = R.drawable.category_fasonnyi_prokat,
+    val products: List<Product> = listOf(
+        Product(
+            itemLayoutId = R.layout.shveller_include_layout,
+            picture = R.drawable.product_shveller,
+            title = R.string.shveller_title,
+            description = R.string.shveller_description,
+            upakovka = R.string.shveller_upakovki,
+            marochnyiAssortiment = R.string.shveller_marki),
+        Product(
+            itemLayoutId = R.layout.ugolok_ravnopolochnyi_include_layout,
+            picture = R.drawable.ugolok_ravnopolochnyi,
+            title = R.string.Ugolok_ravnopolochnyi_title,
+            description = R.string.Ugolok_ravnopolochnyi_description,
+            upakovka = R.string.Ugolok_ravnopolochnyi_upakovki,
+            marochnyiAssortiment = R.string.Ugolok_ravnopolochnyi_marochnyi_assortiment),
+        Product(
+            itemLayoutId = R.layout.ugolok_neravnopolochnyi_include_layout,
+            picture = R.drawable.ugolok_neravnopolochnyi,
+            title = R.string.Ugolok_neravnopolochnyi_title,
+            description = R.string.Ugolok_neravnopolochnyi_description,
+            upakovka = R.string.Ugolok_neravnopolochnyi_upakovki,
+            marochnyiAssortiment = R.string.Ugolok_neravnopolochnyi_marochnyi_assortiment),
+        Product(
+            itemLayoutId = R.layout.dvutavrovaia_balka_include_layout,
+            picture = R.drawable.dvutavrovaia_balka,
+            title = R.string.Dvutavrovaia_balka_title,
+            description = R.string.Dvutavrovaia_balka_description,
+            upakovka = R.string.Dvutavrovaia_balka_upakovki,
+            marochnyiAssortiment = R.string.Dvutavrovaia_balka_marochnyi_assortiment
+        )
+    )
 ) : AppEntity, Parcelable
 
 

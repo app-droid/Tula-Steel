@@ -13,8 +13,9 @@
         <item name="fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/dark_font_grey</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:padding">16dp</item>
         <item name="singleLine">false</item>
         <item name="maxLines">2</item>
     </style>
@@ -33,6 +34,19 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="singleLine">false</item>
+
+    </style>
+
+    <style name="TextTableTitle.Header">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/card_blue_background</item>
+        <item name="android:textColor">@color/light_font_grey</item>
         <item name="android:gravity">center_vertical</item>
         <item name="singleLine">false</item>
 

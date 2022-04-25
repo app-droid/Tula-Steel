@@ -3,11 +3,13 @@ package ru.alinadorozhkina.tula_steel.activities
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
+import ru.alinadorozhkina.tula_steel.adapter.ViewPagerAdapter
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductLayoutBinding
-import ru.alinadorozhkina.tula_steel.entities.Product
-import ru.alinadorozhkina.tula_steel.entities.TovarnaiaZagotovka
+import ru.alinadorozhkina.tula_steel.entities.*
 import ru.alinadorozhkina.tula_steel.fragments.*
 
 
@@ -15,8 +17,14 @@ class ProductActivity : AppCompatActivity() {
 
     private var vb: ActivityProductLayoutBinding? = null
 
-    val tovarnaiaZagotovka: TovarnaiaZagotovka = TovarnaiaZagotovka()
-    val listTovarnaiaZagotovka: List<Product> = tovarnaiaZagotovka.products
+
+    private val tovarnaiaZagotovka: TovarnaiaZagotovka = TovarnaiaZagotovka()
+    private val katanka: Katanka_ = Katanka_()
+    private val sortovoiProkat: SortovoiProkat = SortovoiProkat()
+    private val armaturnyiProkat: ArmaturnyiProkat = ArmaturnyiProkat()
+
+    private val fasonnyiProkat: FasonnyiProkat = FasonnyiProkat()
+    private val fasonnyiProkatProducts: List<Product> = fasonnyiProkat.products
 
 
 //    private lateinit var drawer: DrawerLayout
@@ -34,16 +42,30 @@ class ProductActivity : AppCompatActivity() {
 
 
         val arguments = intent.extras
-        val id = arguments!!["ID"]
 
-        when (id) {
-            1 -> {
-                val baseFragment = BaseFragment.newInstance(listTovarnaiaZagotovka[0])
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, baseFragment)
-                    .commit()
+        when (arguments!!["ID"]) {
+            1 -> vb?.labelHeader?.text = getString(tovarnaiaZagotovka.title)
+            2 -> vb?.labelHeader?.text = getString(katanka.title)
+            3 -> vb?.labelHeader?.text = getString(sortovoiProkat.title)
+            4 -> vb?.labelHeader?.text = getString(armaturnyiProkat.title)
+           5 -> {
+               vb?.labelHeader?.text = getString(fasonnyiProkat.title)
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                fasonnyiProkatProducts.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(255,0,255,0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
+            6 -> { }
         }
-        Toast.makeText(this, id.toString(), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setUpViewPager() {
+
+    }
+
 //        val toolbar: MaterialToolbar? = vb?.topAppBar
 //        setSupportActionBar(toolbar)
 //        drawer = vb?.drawerLayout!!
@@ -145,4 +167,3 @@ class ProductActivity : AppCompatActivity() {
 //    companion object {
 //        fun getStartIntent(context: Context) = Intent(context, RiadovoiProkatActivity::class.java)
 //    }
-}

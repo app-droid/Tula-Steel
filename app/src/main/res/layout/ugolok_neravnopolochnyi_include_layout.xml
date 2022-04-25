@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="474dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/card_background"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/linear_NTD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_NTD"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="НТД" />
+
+                <TextView
+                    android:id="@+id/tv_NTD_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="ГОСТ 8510-86" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_NTD">
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Номер" />
+
+                <TextView
+                    android:id="@+id/tv_number_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="40х25х3;4;5, 45х28х3;4, 50х32х3;4, 56х36х4;5, 63х40х4;5;6;8, 70х45х5, 75х50х5;6;8, 80х50х5;6, 90х56х5,5;6;8, 100х63х6;7;8;10, 110х70х6,5;8, 125х80х7;8;10;12, 140х90х8;10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_number">
+
+                <TextView
+                    android:id="@+id/tv_length"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Длина, мм" />
+
+                <TextView
+                    android:id="@+id/tv_length_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="6000 – 12000" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
