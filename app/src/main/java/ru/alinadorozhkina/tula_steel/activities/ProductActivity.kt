@@ -7,12 +7,16 @@ import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductLayoutBinding
 import ru.alinadorozhkina.tula_steel.entities.Product
+import ru.alinadorozhkina.tula_steel.entities.TovarnaiaZagotovka
 import ru.alinadorozhkina.tula_steel.fragments.*
 
 
 class ProductActivity : AppCompatActivity() {
 
     private var vb: ActivityProductLayoutBinding? = null
+
+    val tovarnaiaZagotovka: TovarnaiaZagotovka = TovarnaiaZagotovka()
+    val listTovarnaiaZagotovka: List<Product> = tovarnaiaZagotovka.products
 
 
 //    private lateinit var drawer: DrawerLayout
@@ -34,9 +38,7 @@ class ProductActivity : AppCompatActivity() {
 
         when (id) {
             1 -> {
-                val baseFragment = BaseFragment.newInstance(Product(itemLayoutId = R.layout.shveller_include_layout,
-                picture = R.drawable.product_shveller, title = R.string.shveller_title,
-                description = R.string.shveller_description, marki = R.string.shveller_marki, upakovka = R.string.shveller_upakovki))
+                val baseFragment = BaseFragment.newInstance(listTovarnaiaZagotovka[0])
                 supportFragmentManager.beginTransaction().add(R.id.content_frame, baseFragment)
                     .commit()
             }

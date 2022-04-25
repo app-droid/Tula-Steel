@@ -14,19 +14,13 @@ interface AppEntity {
 data class Product (
     val picture: Int,
     val title: Int,
-    val description: Int?,
+    val description: Int? = null,
     val itemLayoutId: Int,
-    val marki: Int?,
-    val upakovka: Int?
+    val marki: Int? = null,
+    val upakovka: Int
 ): Parcelable
 
-//@Parcelize
-//data class Shveller(
-//    override val picture: Int = R.drawable.product_shveller,
-//    override val title: Int = R.string.shveller_title,
-//    override val description: Int? = R.string.shveller_description,
-//    override val itemLayoutId: Int = R.layout.shveller_include_layout
-//) : Product, Parcelable
+
 
 @Parcelize
 data class Title(
@@ -40,13 +34,14 @@ data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
     override val path: Int = R.drawable.category_tovarnaia_zagotovka,
-//    val list: List<Product> = listOf(
-//        Product(
-//            itemLayoutId = R.layout.shveller_include_layout,
-//            picture = R.drawable.product_shveller, title = R.string.shveller_title,
-//            description = R.string.shveller_description
-//        )
-//    )
+    val products: List<Product> = listOf(
+        Product(itemLayoutId = R.layout.shveller_include_layout,
+            picture = R.drawable.product_shveller,
+            title = R.string.shveller_title,
+            description = R.string.shveller_description,
+            upakovka = R.string.shveller_upakovki,
+           marki = R.string.shveller_marki)
+    )
 ) : AppEntity
 
 @Parcelize

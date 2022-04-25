@@ -39,10 +39,9 @@ class BaseFragment : Fragment() {
             vb?.layoutStub?.inflate()
 
             product.marki?.let {
-                vb?.tvMarkaValue?.text = getString(it)  }
+                vb?.tvMarkaValue?.text = getString(it)  } ?: vb?.linearForMainContent?.removeViews(4, 2)
 
-            product.upakovka?.let {
-                vb?.tvUpakovkaValue?.text = getString(it)  } ?: vb?.tvUpakovka?.setvisibility(View.VISIBLE)
+            vb?.tvUpakovkaValue?.text = getString(product.upakovka)
         }
     }
 
