@@ -17,7 +17,7 @@ class ProductActivity : AppCompatActivity() {
 
     private var vb: ActivityProductLayoutBinding? = null
     private val tovarnaiaZagotovka: TovarnaiaZagotovka = TovarnaiaZagotovka()
-    private val katanka: Katanka_ = Katanka_()
+    private val katanka: Katanka = Katanka()
     private val sortovoiProkat: SortovoiProkat = SortovoiProkat()
     private val armaturnyiProkat: ArmaturnyiProkat = ArmaturnyiProkat()
     private val fasonnyiProkat: FasonnyiProkat = FasonnyiProkat()

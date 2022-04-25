@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
     private val categories: List<AppEntity> = listOf(
         Title(),
         TovarnaiaZagotovka(),
-        Katanka_(),
+        Katanka(),
         SortovoiProkat(),
         ArmaturnyiProkat(),
         FasonnyiProkat()

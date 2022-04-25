@@ -20,15 +20,12 @@ data class Product (
     val upakovka: Int
 ): Parcelable
 
-
-
 @Parcelize
 data class Title(
     override val id: Int = 0,
     override val title: Int = R.string.our_prodaction,
     override val path: Int = R.string.title_body_text,
 ) : AppEntity, Parcelable
-
 
 data class TovarnaiaZagotovka(
     override val id: Int = 1,
@@ -41,14 +38,12 @@ data class TovarnaiaZagotovka(
             description = R.string.Tovarnaia_zagotovka_description,
             picture = R.drawable.tovarnaia_zagotovka,
             marochnyiAssortiment = R.string.Tovarnaia_zagotovka_marochnyi_assortiment,
-            upakovka = R.string.Tovarnaia_zagotovka_upakovki
-        )
+            upakovka = R.string.Tovarnaia_zagotovka_upakovki)
     )
-
 ) : AppEntity
 
 @Parcelize
-data class Katanka_(
+data class Katanka(
     override val id: Int = 2,
     override val title: Int = R.string.category_katanka,
     override val path: Int = R.drawable.category_katanka,
