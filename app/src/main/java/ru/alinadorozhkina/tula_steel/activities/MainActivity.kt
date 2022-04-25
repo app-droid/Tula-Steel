@@ -63,6 +63,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
         )
 
         toggle.isDrawerIndicatorEnabled = false
+        toggle.toolbarNavigationClickListener = View.OnClickListener {
+            drawer.openDrawer(
+                GravityCompat.START
+            )
+        }
         toolbar?.setNavigationIcon(R.drawable.ic_baseline_menu_24)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
@@ -72,6 +77,13 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
 
     override fun onItemClick(entity: AppEntity) {
         Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
+        intent(entity.id)
+    }
+
+    private fun intent (id: Int) {
+        val intent = Intent(this, ProductActivity::class.java)
+        intent.putExtra("ID", id)
+        startActivity(intent)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

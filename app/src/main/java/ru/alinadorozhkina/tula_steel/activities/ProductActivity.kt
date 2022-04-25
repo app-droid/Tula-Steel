@@ -1,126 +1,144 @@
 package ru.alinadorozhkina.tula_steel.activities
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.navigation.NavigationView
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
-import ru.alinadorozhkina.tula_steel.databinding.ActivityProductBinding
+import ru.alinadorozhkina.tula_steel.databinding.ActivityProductLayoutBinding
+import ru.alinadorozhkina.tula_steel.entities.Product
 import ru.alinadorozhkina.tula_steel.fragments.*
 
 
-class ProductActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class ProductActivity : AppCompatActivity() {
 
-    private var vb: ActivityProductBinding? = null
-    private lateinit var drawer: DrawerLayout
-    private lateinit var navigationView: NavigationView
+    private var vb: ActivityProductLayoutBinding? = null
+
+
+//    private lateinit var drawer: DrawerLayout
+//    private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        vb = ActivityProductBinding.inflate(layoutInflater)
+        vb = ActivityProductLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
-        drawer = vb?.drawerLayout!!
-        navigationView = vb?.navView!!
-        val toggle = ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawer.addDrawerListener(toggle)
-        toggle.syncState()
+        toolbar!!.setNavigationOnClickListener {
+            finish()
+        }
 
-        navigationView.setNavigationItemSelectedListener(this)
 
         val arguments = intent.extras
         val id = arguments!!["ID"]
 
         when (id) {
             1 -> {
-                val riadovoiProkat = FragmentProkatRiadovoi()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, riadovoiProkat)
+                val baseFragment = BaseFragment.newInstance(Product(itemLayoutId = R.layout.shveller_include_layout,
+                picture = R.drawable.product_shveller, title = R.string.shveller_title,
+                description = R.string.shveller_description, marki = R.string.shveller_marki, upakovka = R.string.shveller_upakovki))
+                supportFragmentManager.beginTransaction().add(R.id.content_frame, baseFragment)
                     .commit()
-            }
-
-            2 -> {
-                val konstProkat = FragmentProkatKonstruktcionnyi()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, konstProkat)
-                    .commit()
-            }
-
-            3 -> {
-                val kvadratnaia = FragmentKvadratnaiaZagotovka()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, kvadratnaia)
-                    .commit()
-
-            }
-
-            5 -> {
-                val about = FragmentAbout()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, about)
-                    .commit()
-
-            }
-
-            6 -> {
-                val certificate = FragmentCertificates()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, certificate)
-                    .commit()
-
-            }
-
-        }
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.item1 -> {
-                startActivity(MainActivity.getStartIntent(this))
-                finish()
-            }
-            R.id.item2 -> {
-                val riadovoiProkat = FragmentProkatRiadovoi()
-                supportFragmentManager.beginTransaction().replace(R.id.content_frame, riadovoiProkat)
-                    .commit()
-
-            }
-            R.id.item3 -> {
-                val konstProkat = FragmentProkatKonstruktcionnyi()
-                supportFragmentManager.beginTransaction().replace(R.id.content_frame, konstProkat)
-                    .commit()
-
-            }
-            R.id.item4 -> {
-                val kvadratnaia = FragmentKvadratnaiaZagotovka()
-                supportFragmentManager.beginTransaction().replace(R.id.content_frame, kvadratnaia)
-                    .commit()
-
-            }
-            R.id.item5 -> {
-                Toast.makeText(this, "5", Toast.LENGTH_LONG).show()
-
-            }
-            R.id.item6 -> {
-                val about = FragmentAbout()
-                supportFragmentManager.beginTransaction().replace(R.id.content_frame, about)
-                    .commit()
-            }
-
-            R.id.item7 -> {
-                val certificate = FragmentCertificates()
-                supportFragmentManager.beginTransaction().replace(R.id.content_frame, certificate)
-                    .commit()
-
             }
         }
-
-        drawer.closeDrawer(GravityCompat.START)
-        return true
+        Toast.makeText(this, id.toString(), Toast.LENGTH_SHORT).show()
+//        val toolbar: MaterialToolbar? = vb?.topAppBar
+//        setSupportActionBar(toolbar)
+//        drawer = vb?.drawerLayout!!
+//        navigationView = vb?.navView!!
+//        val toggle = ActionBarDrawerToggle(
+//            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+//        )
+//        drawer.addDrawerListener(toggle)
+//        toggle.syncState()
+//
+//        navigationView.setNavigationItemSelectedListener(this)
+//
+//        val arguments = intent.extras
+//        val id = arguments!!["ID"]
+//
+//        when (id) {
+//            1 -> {
+//                val riadovoiProkat = FragmentProkatRiadovoi()
+//                supportFragmentManager.beginTransaction().add(R.id.content_frame, riadovoiProkat)
+//                    .commit()
+//            }
+//
+//            2 -> {
+//                val konstProkat = FragmentProkatKonstruktcionnyi()
+//                supportFragmentManager.beginTransaction().add(R.id.content_frame, konstProkat)
+//                    .commit()
+//            }
+//
+//            3 -> {
+//                val kvadratnaia = FragmentKvadratnaiaZagotovka()
+//                supportFragmentManager.beginTransaction().add(R.id.content_frame, kvadratnaia)
+//                    .commit()
+//
+//            }
+//
+//            5 -> {
+//                val about = FragmentAbout()
+//                supportFragmentManager.beginTransaction().add(R.id.content_frame, about)
+//                    .commit()
+//
+//            }
+//
+//            6 -> {
+//                val certificate = FragmentCertificates()
+//                supportFragmentManager.beginTransaction().add(R.id.content_frame, certificate)
+//                    .commit()
+//
+//            }
+//
+//        }
     }
+
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.item1 -> {
+//                startActivity(MainActivity.getStartIntent(this))
+//                finish()
+//            }
+//            R.id.item2 -> {
+//                val riadovoiProkat = FragmentProkatRiadovoi()
+//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, riadovoiProkat)
+//                    .commit()
+//
+//            }
+//            R.id.item3 -> {
+//                val konstProkat = FragmentProkatKonstruktcionnyi()
+//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, konstProkat)
+//                    .commit()
+//
+//            }
+//            R.id.item4 -> {
+//                val kvadratnaia = FragmentKvadratnaiaZagotovka()
+//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, kvadratnaia)
+//                    .commit()
+//
+//            }
+//            R.id.item5 -> {
+//                Toast.makeText(this, "5", Toast.LENGTH_LONG).show()
+//
+//            }
+//            R.id.item6 -> {
+//                val about = FragmentAbout()
+//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, about)
+//                    .commit()
+//            }
+//
+//            R.id.item7 -> {
+//                val certificate = FragmentCertificates()
+//                supportFragmentManager.beginTransaction().replace(R.id.content_frame, certificate)
+//                    .commit()
+//
+//            }
+//        }
+//
+//        drawer.closeDrawer(GravityCompat.START)
+//        return true
+//    }
 
 //    companion object {
 //        fun getStartIntent(context: Context) = Intent(context, RiadovoiProkatActivity::class.java)

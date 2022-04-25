@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TextContactStyle">
-        <item name="fontFamily">@font/roboto</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28px</item>
-        <item name="android:gravity">center</item>
-    </style>
 
     <style name="TextHeaderStyle">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/dark_font_grey</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">56px</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">32sp</item>
     </style>
+
+    <style name="TextTitleStyle">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/dark_font_grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="singleLine">false</item>
+        <item name="maxLines">2</item>
+    </style>
+
+    <style name="TextDescriptionStyle">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/dark_font_grey</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="singleLine">false</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextTableTitle">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="singleLine">false</item>
+
+    </style>
+
+    <style name="TextTableTitle.Value">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/dark_font_grey</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">10dp</item>
+    </style>
+
+
+
+
+    <style name="CardViewStyleMainCategory">
+        <item name="android:layout_width">389dp</item>
+        <item name="android:layout_height">261dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:backgroundTint">#F0F0F0</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">3dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
 
     <style name="TextHeaderStyle.Small">
         <item name="fontFamily">@font/roboto</item>
@@ -91,15 +143,7 @@
         <item name="cardElevation">@dimen/elevation</item>
     </style>
 
-    <style name="CardViewStyleMainCategory">
-        <item name="android:layout_width">389dp</item>
-        <item name="android:layout_height">261dp</item>
-        <item name="android:layout_marginEnd">16dp</item>
-        <item name="android:layout_marginBottom">37dp</item>
-        <item name="android:backgroundTint">#F0F0F0</item>
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">10dp</item>
-    </style>
+
 
     <style name="CardViewStyle.Blue">
         <item name="android:backgroundTint">@color/card_blue_background</item>
@@ -127,6 +171,14 @@
     <item name="spanCount">2</item>
 
 </style>
+
+    <style name="TextContactStyle">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">28px</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 
     <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">

@@ -147,4 +147,22 @@
     <string name="navigation_drawer_open">Drawer Open</string>
     <string name="navigation_drawer_close">Drawer Closed</string>
 
+    !-- Shveller -->
+    <string name="shveller_title">Швеллеры стальные горячекатанные</string>
+    <string name="shveller_description">Швеллер имеет широкую область применения. Главным образом его используют в строительстве.
+        \nШвеллер применяют при сооружении каркасов производственных и жилых зданий, прокладке коммуникаций и для усиления несущих конструкций.
+        Профиль как самостоятельная деталь встречается в перекрытиях, каркасах зданий и пандусов.
+       \nТакже его используют при возведении мостов, отделочных работах и при реконструкции зданий жилого промышленного назначения.
+        \nБез швеллера нельзя представить строительство опорных колон и кровельных прогонов.</string>
+    <string name="shveller_marki">ГОСТ 535-2005; ГОСТ 19281-2014; ГОСТ 27772-2015</string>
+    <string name="shveller_upakovki">Пачки весом до 5 тонн, увязанные катанкой. На каждую пачку прикрепляются две пластиковые бирки.</string>
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

@@ -11,59 +11,72 @@ interface AppEntity {
 }
 
 @Parcelize
+data class Product (
+    val picture: Int,
+    val title: Int,
+    val description: Int?,
+    val itemLayoutId: Int,
+    val marki: Int?,
+    val upakovka: Int?
+): Parcelable
+
+//@Parcelize
+//data class Shveller(
+//    override val picture: Int = R.drawable.product_shveller,
+//    override val title: Int = R.string.shveller_title,
+//    override val description: Int? = R.string.shveller_description,
+//    override val itemLayoutId: Int = R.layout.shveller_include_layout
+//) : Product, Parcelable
+
+@Parcelize
 data class Title(
     override val id: Int = 0,
     override val title: Int = R.string.our_prodaction,
     override val path: Int = R.string.title_body_text,
-): AppEntity, Parcelable
+) : AppEntity, Parcelable
 
-@Parcelize
+
 data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
     override val path: Int = R.drawable.category_tovarnaia_zagotovka,
-): AppEntity, Parcelable
+//    val list: List<Product> = listOf(
+//        Product(
+//            itemLayoutId = R.layout.shveller_include_layout,
+//            picture = R.drawable.product_shveller, title = R.string.shveller_title,
+//            description = R.string.shveller_description
+//        )
+//    )
+) : AppEntity
 
 @Parcelize
 data class Katanka_(
     override val id: Int = 2,
     override val title: Int = R.string.category_katanka,
     override val path: Int = R.drawable.category_katanka,
-): AppEntity, Parcelable
+) : AppEntity, Parcelable
 
 @Parcelize
-data class SortovoiProkat (
+data class SortovoiProkat(
     override val id: Int = 3,
     override val title: Int = R.string.category_sortovoi_prokat,
     override val path: Int = R.drawable.category_sortovoi_prokat,
-): AppEntity, Parcelable
+) : AppEntity, Parcelable
 
 @Parcelize
-data class ArmaturnyiProkat (
+data class ArmaturnyiProkat(
     override val id: Int = 4,
     override val title: Int = R.string.category_armaturnyi_prokat,
     override val path: Int = R.drawable.category_armaturnyi_prokat,
-): AppEntity, Parcelable
+) : AppEntity, Parcelable
 
 @Parcelize
-data class FasonnyiProkat (
+data class FasonnyiProkat(
     override val id: Int = 5,
     override val title: Int = R.string.category_fasonnyi_prokat,
     override val path: Int = R.drawable.category_fasonnyi_prokat,
-): AppEntity, Parcelable
+) : AppEntity, Parcelable
 
-
-data class Product (
-    val picture: Int,
-    val title: Int,
-    val description: Int,
-    val itemLayoutId: Int,
-    val list: List<AppEntity>,
-    val marki: Int,
-    val upakovki: Int,
-
-
-)
 
 //data class ArmaturaGladkaia(
 //    override val title: Int = R.string.product_armatura_gladkaia,
