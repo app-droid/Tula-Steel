@@ -3,29 +3,36 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_card_view"
+
     style="@style/CardViewStyleMainCategory">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_picture"
             android:layout_width="match_parent"
-            android:layout_height="214dp" />
+            android:layout_height="174dp"
+            android:src="@drawable/picture_loading"
+            android:paddingStart="62dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Название"
-            android:textSize="24sp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
+            android:padding="8dp"
+            android:text="Название"
             android:textColor="@color/blue_dark"
+            android:textSize="24sp"
             android:textStyle="normal"
-            android:textAlignment="center"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_picture" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -8,17 +8,21 @@
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/filter_spinner_dropdown_bg.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/hamburger.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.20885416666666667" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.20885416666666667" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24_dark.xml" value="0.20885416666666667" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/drawable/text_color_selector.xml" value="0.2203125" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_main_layout.xml" value="0.33" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_main_layout.xml" value="0.22" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_picture.xml" value="0.20416666666666666" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_product.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_product_layout.xml" value="0.17" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/activity_riadovoi_prokat.xml" value="0.48756218905472637" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/app_bar.xml" value="0.20416666666666666" />
-        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/certificates.xml" value="0.43" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/armatura_motki_include_layout.xml" value="0.19270833333333334" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/armatura_prutki_include_layout.xml" value="0.25" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/certificates.xml" value="0.25" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/content_riadovoi_prokat.xml" value="0.20416666666666666" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/detailed_category_item_view.xml" value="0.19270833333333334" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/dropdown_item.xml" value="0.67" />
@@ -31,14 +35,14 @@
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/fragment_prokat_konstruktcionnyi.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/fragment_prokat_riadovoi.xml" value="0.25" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/header_navigation_drawer.xml" value="0.20416666666666666" />
-        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/item_card_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/item_card_main.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/item_certificate_card.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/katanka_include_layout.xml" value="0.5369718309859155" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/krug_include_layout.xml" value="0.25" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/kvadrat_include_layout.xml" value="0.19270833333333334" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/kvadratnaia_zagotovka_include_layout.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/main_category_item_view.xml" value="0.564299424184261" />
-        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/main_title_item_view.xml" value="0.33" />
+        <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/main_title_item_view.xml" value="1.25" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/nav_header_riadovoi_prokat.xml" value="0.20416666666666666" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/polosa_include_layout.xml" value="0.33" />
         <entry key="..\:/programming/AndroidProject/Tula-Steel/app/src/main/res/layout/shestigrannik_include_layout.xml" value="0.19270833333333334" />

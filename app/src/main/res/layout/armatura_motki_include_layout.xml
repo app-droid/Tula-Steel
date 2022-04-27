@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/card_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/linear_NTD"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_NTD"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="НТД"/>
+
+                <TextView
+                    android:id="@+id/tv_NTD_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="ГОСТ 5781-82"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_profil"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_NTD">
+
+                <TextView
+                    android:id="@+id/tv_profil"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Профиль"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_profil_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="4dp"
+                    android:text="Периодический"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_class"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_profil">
+
+                <TextView
+                    android:id="@+id/tv_class"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Класс" />
+
+                <TextView
+                    android:id="@+id/tv_class_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="А-III (А400)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_marka"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_class">
+
+                <TextView
+                    android:id="@+id/tv_marka"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Марка стали" />
+
+                <TextView
+                    android:id="@+id/tv_marka_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="25Г2С; 35ГС" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_diametr"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_marka">
+
+                <TextView
+                    android:id="@+id/tv_diametr"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Диаметр, мм" />
+
+                <TextView
+                    android:id="@+id/tv_diametr_value"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="8,0 – 10,0" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card3"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/card_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/linear_NTD3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_NTD3"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="НТД"/>
+
+                <TextView
+                    android:id="@+id/tv_NTD_value3"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="ГОСТ 34028-2016"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_profil3"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_NTD3">
+
+                <TextView
+                    android:id="@+id/tv_profil3"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Профиль"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_profil_value3"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="4dp"
+                    android:text="Периодический"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_class3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_profil3">
+
+                <TextView
+                    android:id="@+id/tv_class3"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Класс" />
+
+                <TextView
+                    android:id="@+id/tv_class_value3"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="A500С" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_marka3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_class3">
+
+                <TextView
+                    android:id="@+id/tv_marka3"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Марка стали" />
+
+                <TextView
+                    android:id="@+id/tv_marka_value3"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_diametr3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_marka3">
+
+                <TextView
+                    android:id="@+id/tv_diametr3"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Диаметр, мм" />
+
+                <TextView
+                    android:id="@+id/tv_diametr_value3"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="6,0 – 14,0" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/card_background"
+        app:layout_constraintStart_toEndOf="@id/card1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/linear_NTD2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_NTD2"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="НТД"/>
+
+                <TextView
+                    android:id="@+id/tv_NTD_value2"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="ГОСТ 34028-2016"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_profil2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_NTD2">
+
+                <TextView
+                    android:id="@+id/tv_profil2"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Профиль"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_profil_value2"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="4dp"
+                    android:text="Гладкий"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_class2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_profil2">
+
+                <TextView
+                    android:id="@+id/tv_class2"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Класс" />
+
+                <TextView
+                    android:id="@+id/tv_class_value2"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="А240C" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_marka2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_class2">
+
+                <TextView
+                    android:id="@+id/tv_marka2"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Марка стали" />
+
+                <TextView
+                    android:id="@+id/tv_marka_value2"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_diametr2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_marka2">
+
+                <TextView
+                    android:id="@+id/tv_diametr2"
+                    style="@style/TextTableTitle"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Диаметр, мм" />
+
+                <TextView
+                    android:id="@+id/tv_diametr_value2"
+                    style="@style/TextTableTitle.Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="8,0 – 22,0" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

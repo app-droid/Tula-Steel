@@ -22,18 +22,22 @@ class MultiRVAdapter(
         val inflater = LayoutInflater.from(parent.context)
         return if (viewType == TYPE_TITLE) {
             MainTitleItemViewHolder(
-                inflater.inflate(R.layout.main_title_item_view, parent,
-                    false) as View
+                inflater.inflate(
+                    R.layout.main_title_item_view, parent,
+                    false
+                ) as View
             )
         } else {
             MainCategoryItemViewHolder(
-                inflater.inflate(R.layout.main_category_item_view, parent,
-                    false) as View
+                inflater.inflate(
+                    R.layout.main_category_item_view, parent,
+                    false
+                ) as View
             )
         }
     }
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)
-    {
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (getItemViewType(position) == TYPE_TITLE) {
             holder as MainTitleItemViewHolder
             holder.bind(data[position])
@@ -42,11 +46,13 @@ class MultiRVAdapter(
             holder.bind(data[position])
         }
     }
+
     override fun getItemCount(): Int {
         return data.size
     }
+
     override fun getItemViewType(position: Int): Int {
-        return if (data[position].id ==0) TYPE_TITLE else
+        return if (data[position].id == 0) TYPE_TITLE else
             TYPE_CATEGORIES
     }
 
@@ -62,13 +68,14 @@ class MultiRVAdapter(
         }
     }
 
-
     inner class MainTitleItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val ui: MainTitleItemViewBinding = MainTitleItemViewBinding.bind(itemView)
 
         fun bind(data: AppEntity) {
             ui.tvOurProduction.text = context.getString(data.title)
-            ui.tvBodyProduction.text = context.getString(data.path)
+            itemView.setOnClickListener {
+                onItemClickListener.onItemClick(data)
+            }
         }
     }
 

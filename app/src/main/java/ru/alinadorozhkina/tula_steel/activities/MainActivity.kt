@@ -8,7 +8,6 @@ import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.entities.*
 import android.content.Intent
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
     private lateinit var navigationView: NavigationView
 
     private val categories: List<AppEntity> = listOf(
-        Title(),
+        All(),
         TovarnaiaZagotovka(),
         Katanka(),
         SortovoiProkat(),
@@ -40,6 +39,10 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
         setContentView(vb?.root)
         initNavDrawer()
         initRV()
+        vb?.cardCertificates?.setOnClickListener {
+            intent(7)
+        }
+
     }
 
     private fun initRV()= with(vb){
@@ -73,7 +76,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
     }
 
     override fun onItemClick(entity: AppEntity) {
-        Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
         intent(entity.id)
     }
 
@@ -101,6 +103,9 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
     override fun onDestroy() {
         super.onDestroy()
         vb = null
+    }
+
+    override fun onBackPressed() {
     }
 
     companion object {

@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".fragments.FragmentCertificates">
 
     <LinearLayout
         android:id="@+id/linear_layout_picture"
         android:layout_width="480px"
         android:layout_height="match_parent"
-        android:background="@drawable/menu_back"
+        android:background="@drawable/menu_background"
         android:orientation="vertical"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -73,30 +76,40 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_certificate_title"
-        style="@style/TextHeaderStyle.Small"
-        android:layout_width="1318px"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/side_margin"
-        android:layout_marginTop="@dimen/top_margin"
-        android:text="@string/certificates_34028_2016"
-        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </TextView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_certificate"
-        style="@style/RVStyle"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
-        app:layout_constraintTop_toBottomOf="@id/tv_certificate_title"
-        tools:listitem="@layout/item_certificate_card" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginStart="@dimen/side_margin">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_certificate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textStyle="normal"
+            android:textSize="24sp"
+            android:textColor="@color/dark_font_grey"
+            android:text="@string/certificates_34028_2016"
+            app:layout_constraintStart_toEndOf="@id/linear_layout_picture"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            tools:listitem="@layout/item_certificate_card"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
 
 
 
