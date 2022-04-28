@@ -61,16 +61,19 @@
     </style>
 
 
-
-
-    <style name="CardViewStyleMainCategory">
-        <item name="android:layout_width">379dp</item>
-        <item name="android:layout_height">224dp</item>
-        <item name="android:layout_margin">0dp</item>
-        <item name="android:backgroundTint">#F0F0F0</item>
-        <item name="cardCornerRadius">0dp</item>
-        <item name="cardElevation">0dp</item>
+    <style name="CardViewStyleMain">
+        <item name="android:layout_width">378dp</item>
+        <item name="android:layout_height">220dp</item>
+        <item name="android:backgroundTint">@color/card_background</item>
+,         <item name="cardCornerRadius">0dp</item>
     </style>
+
+    <style name="CardViewStyleMain.Round">
+        <item name="cardCornerRadius">16dp</item>
+
+    </style>
+
+
 
 
 

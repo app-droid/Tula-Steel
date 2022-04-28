@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
 
     private val categories: List<AppEntity> = listOf(
         All(),
-        TovarnaiaZagotovka(),
-        Katanka(),
-        SortovoiProkat(),
         ArmaturnyiProkat(),
-        FasonnyiProkat()
+        SortovoiProkat(),
+        Katanka(),
+        FasonnyiProkat(),
+        TovarnaiaZagotovka()
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

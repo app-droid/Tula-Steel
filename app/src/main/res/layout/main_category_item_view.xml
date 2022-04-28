@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_card_view"
-
-    style="@style/CardViewStyleMainCategory">
+    style="@style/CardViewStyleMain">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,10 +11,9 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_picture"
-            android:layout_width="match_parent"
-            android:layout_height="174dp"
+            android:layout_width="378dp"
+            android:layout_height="189dp"
             android:src="@drawable/picture_loading"
-            android:paddingStart="62dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,11 +23,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
-            android:padding="8dp"
-            android:text="Название"
+            android:paddingStart="12dp"
             android:textColor="@color/blue_dark"
             android:textSize="24sp"
-            android:textStyle="normal"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_picture" />
 

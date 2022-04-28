@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_card_view"
-    style="@style/CardViewStyleMainCategory"
+    style="@style/CardViewStyleMain"
     android:backgroundTint="@color/blue_dark">
 
     <LinearLayout
@@ -19,8 +19,8 @@
             android:id="@+id/tv_our_production"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Весь металлопрокат"
-            android:textSize="20sp"
+            android:text="@string/our_prodaction"
+            android:textSize="24sp"
             android:gravity="center_vertical"
             android:fontFamily="@font/roboto"
             android:textColor="@color/light_font_grey"
@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_marginStart="8dp"
-            android:src="@drawable/ic_baseline_arrow_right_alt_24">
+            android:src="@drawable/ic_baseline_arrow_right_alt_24_dark">
 
         </com.google.android.material.imageview.ShapeableImageView>
 
