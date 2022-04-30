@@ -15,11 +15,11 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import ru.alinadorozhkina.tula_steel.adapter.MultiRVAdapter
-import ru.alinadorozhkina.tula_steel.adapter.OnItemClickListener
+import ru.alinadorozhkina.tula_steel.adapter.OnItemMultiClickListener
 import ru.alinadorozhkina.tula_steel.databinding.ActivityMainLayoutBinding
 import ru.alinadorozhkina.tula_steel.fragments.*
 
-class MainActivity : AppCompatActivity(), OnItemClickListener,
+class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     NavigationView.OnNavigationItemSelectedListener {
     private var vb: ActivityMainLayoutBinding? = null
     private lateinit var drawer: DrawerLayout

@@ -1,23 +1,20 @@
 package ru.alinadorozhkina.tula_steel.fragments
 
+import androidx.core.util.Pair
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import ru.alinadorozhkina.tula_steel.databinding.FragmentCertificatesBinding
-import android.widget.Toast
+import android.widget.ImageView
+import androidx.core.app.ActivityOptionsCompat
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.activities.PictureActivity
 import ru.alinadorozhkina.tula_steel.adapter.BaseRVAdapter
 import ru.alinadorozhkina.tula_steel.adapter.OnItemClickListener
 import ru.alinadorozhkina.tula_steel.databinding.CertificatesBinding
-import ru.alinadorozhkina.tula_steel.databinding.ItemCardMainBinding
 import ru.alinadorozhkina.tula_steel.entities.*
-
 
 class FragmentCertificates : Fragment(), OnItemClickListener {
 
@@ -63,8 +60,6 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRV(gost34028_2016)
-       //
-
 
         vb?.tvCertificates5781482?.setOnClickListener {
             updateUI(gost57814_82, R.string.certificates_34028_2016 )
@@ -106,26 +101,17 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
 
     private fun initRV(data: List<AppEntity>) = with(vb) {
         this?.rvCertificate?.adapter = BaseRVAdapter(
+            requireContext(),
             this@FragmentCertificates,
-            data,
-            R.layout.item_certificate_card,
+            data
         )
-        { view, data ->
-            bind(view, data)
-        }
     }
 
-    private fun bind(view: View, data: AppEntity) {
-        val rvBinding = ItemCardMainBinding.bind(view)
-        with(rvBinding) {
-            tvTitle.text = getString(data.title)
-            ivPicture.setImageResource(data.path)
-        }
-    }
-
-    override fun onItemClick(entity: AppEntity) {
+    override fun onItemClick(entity: AppEntity, imageView: ImageView) {
         val intent = Intent(activity, PictureActivity::class.java)
+        val imageViewPair = Pair<View, String>(imageView, getString(R.string.transition_certificate))
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), imageViewPair)
         intent.putExtra("Picture", Picture(entity.id,entity.title, entity.path))
-        startActivity(intent)
+        startActivity(intent, options.toBundle())
     }
 }

@@ -66,7 +66,6 @@ class ProductActivity : AppCompatActivity() {
         startActivity(MainActivity.getStartIntent(this))
         finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
-
     }
 
     private fun setUpViewPager(id: Any?) {
@@ -155,26 +154,6 @@ class ProductActivity : AppCompatActivity() {
         Log.d("ProductActivity", "onDestroy()")
         vb = null
         super.onDestroy()
-    }
-
-    override fun onStart() {
-        Log.d("ProductActivity", "onStart")
-        super.onStart()
-    }
-
-    override fun onRestart() {
-        Log.d("ProductActivity", "onRestart")
-        super.onRestart()
-    }
-
-    override fun onResume() {
-        Log.d("ProductActivity", "onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.d("ProductActivity", "onPause")
-        super.onPause()
     }
 
     override fun onStop() {

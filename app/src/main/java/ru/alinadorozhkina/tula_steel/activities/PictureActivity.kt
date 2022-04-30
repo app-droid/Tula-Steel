@@ -10,6 +10,15 @@ import com.bumptech.glide.Glide
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.databinding.ActivityPictureBinding
 import ru.alinadorozhkina.tula_steel.entities.AppEntity
+import android.R
+import android.graphics.drawable.Drawable
+import android.widget.ImageView
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
+
 
 class PictureActivity : AppCompatActivity() {
 
@@ -21,33 +30,26 @@ class PictureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityPictureBinding.inflate(layoutInflater)
         setContentView(vb?.root)
-        setUpPictureLoading()
         setUpToolbar()
         setUpTimer()
+        setUpPictureLoading()
     }
 
     private fun setUpPictureLoading() {
-        picture= intent.getParcelableExtra("Picture")
+        picture = intent.getParcelableExtra("Picture")
         picture?.let { picture ->
             vb?.tvCertificateTitle?.text = getString(picture.title)
-            vb?.image?.let {
-                Glide
-                    .with(this)
-                    .load(picture.path)
-                    .into(it)
+            supportPostponeEnterTransition()
+            vb?.image?.load(picture.path) {
+                supportStartPostponedEnterTransition()
             }
         }
     }
 
-    private fun setUpTimer(){
+    private fun setUpTimer() {
         countDownTimer = object : CountDownTimer(40000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                Log.d("ProductActivity", "onTick")
-            }
-            override fun onFinish() {
-                Log.d("ProductActivity", "onFinish")
-                finish()
-            }
+            override fun onTick(millisUntilFinished: Long) = Unit
+            override fun onFinish() = toMain()
         }.start()
     }
 
@@ -55,8 +57,13 @@ class PictureActivity : AppCompatActivity() {
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
         toolbar!!.setNavigationOnClickListener {
-            finish()
+            onBackPressed()
         }
+    }
+
+    private fun toMain() {
+        startActivity(MainActivity.getStartIntent(this))
+        finish()
     }
 
     override fun onUserInteraction() {
@@ -80,3 +87,22 @@ class PictureActivity : AppCompatActivity() {
         fun getStartIntent(context: Context) = Intent(context, PictureActivity::class.java)
     }
 }
+
+    fun ImageView.load(url: Int, onLoadingFinished: () -> Unit = {}) {
+        val listener = object : RequestListener<Drawable> {
+            override fun onLoadFailed(e: GlideException?, model: Any?, target: Target <Drawable>?, isFirstResource: Boolean): Boolean {
+                onLoadingFinished()
+                return false
+            }
+
+            override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
+                onLoadingFinished()
+                return false
+            }
+        }
+        Glide.with(this)
+            .load(url)
+            .apply(RequestOptions.placeholderOf(R.drawable.picture_frame))
+            .listener(listener)
+            .into(this)
+    }

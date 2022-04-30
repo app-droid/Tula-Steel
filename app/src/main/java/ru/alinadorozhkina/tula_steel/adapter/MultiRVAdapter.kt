@@ -7,16 +7,22 @@ import android.provider.Settings.System.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.databinding.MainCategoryItemViewBinding
 import ru.alinadorozhkina.tula_steel.databinding.MainTitleItemViewBinding
 import ru.alinadorozhkina.tula_steel.entities.AppEntity
 
+interface OnItemMultiClickListener {
+    fun onItemClick(entity: AppEntity)
+}
+
+
 class MultiRVAdapter(
     val context: Context,
     private var data: List<AppEntity>,
-    private val onItemClickListener: OnItemClickListener
+    private val onItemClickListener: OnItemMultiClickListener
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):

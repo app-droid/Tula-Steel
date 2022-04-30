@@ -15,8 +15,9 @@
         android:padding="14px">
 
         <ImageView
-            android:id="@+id/iv_picture"
+            android:id="@+id/iv_picture_certificate"
             android:layout_width="280px"
+            android:transitionName="@string/transition_certificate"
             android:layout_height="400px"
             android:padding="1dp"
             android:layout_gravity="center"/>

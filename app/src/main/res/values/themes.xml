@@ -8,6 +8,9 @@
         <item name="navigationViewStyle">@style/AppNavigationViewStyle</item>
         <item name="listPreferredItemHeightSmall">116px</item>
 
+        <item name="android:windowContentTransitions">true</item>
+
+
 
 
 

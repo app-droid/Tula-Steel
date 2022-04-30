@@ -1,41 +1,45 @@
 package ru.alinadorozhkina.tula_steel.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
+import ru.alinadorozhkina.tula_steel.R
+import ru.alinadorozhkina.tula_steel.databinding.ItemCertificateCardBinding
 import ru.alinadorozhkina.tula_steel.entities.AppEntity
 
 interface OnItemClickListener {
-    fun onItemClick(entity: AppEntity)
+    fun onItemClick(entity: AppEntity, imageView: ImageView)
 }
 
 class BaseRVAdapter(
+    val context: Context,
     private val onItemClickListener: OnItemClickListener,
     private val products: List<AppEntity>,
-    private val itemLayoutId: Int,
-    private val bind: ((View, data: AppEntity) -> Unit)
 ) : RecyclerView.Adapter<BaseRVAdapter.BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(itemLayoutId, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_certificate_card, parent, false)
         return BaseViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        holder.bind(products[position])
+        holder.bind(products[position] )
     }
 
     override fun getItemCount() = products.size
 
-    inner class BaseViewHolder(private val root: View) : RecyclerView.ViewHolder(root) {
-        //private val ui: ItemCardBinding = ItemCardBinding.bind(root)
+    inner class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val ui: ItemCertificateCardBinding = ItemCertificateCardBinding.bind(itemView)
 
         fun bind(product: AppEntity) {
-            bind(root, product)
-            root.setOnClickListener {
-                onItemClickListener.onItemClick(product)
+            ui.tvTitle.text = context.getString(product.title)
+            ui.ivPictureCertificate.setImageResource(product.path)
+            itemView.setOnClickListener {
+                onItemClickListener.onItemClick(product, ui.ivPictureCertificate)
             }
         }
     }
