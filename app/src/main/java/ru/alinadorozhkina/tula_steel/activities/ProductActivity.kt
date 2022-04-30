@@ -59,8 +59,6 @@ class ProductActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         toolbar!!.setNavigationOnClickListener {
            toMain()
-
-
         }
     }
 
