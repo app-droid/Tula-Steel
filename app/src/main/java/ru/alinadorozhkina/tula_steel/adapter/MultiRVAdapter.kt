@@ -1,6 +1,8 @@
 package ru.alinadorozhkina.tula_steel.adapter
 
+import android.animation.ObjectAnimator
 import android.content.Context
+import android.graphics.Color
 import android.provider.Settings.System.getString
 import android.view.LayoutInflater
 import android.view.View

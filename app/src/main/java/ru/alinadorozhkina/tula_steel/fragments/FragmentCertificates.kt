@@ -63,6 +63,8 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRV(gost34028_2016)
+       //
+
 
         vb?.tvCertificates5781482?.setOnClickListener {
             updateUI(gost57814_82, R.string.certificates_34028_2016 )

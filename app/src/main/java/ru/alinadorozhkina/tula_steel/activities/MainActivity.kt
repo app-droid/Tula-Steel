@@ -7,6 +7,7 @@ import android.view.View
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.entities.*
 import android.content.Intent
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
         super.onCreate(savedInstanceState)
         vb = ActivityMainLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
+        Log.d("MainActivity", "onCreate")
         initNavDrawer()
         initRV()
         vb?.cardCertificates?.setOnClickListener {
@@ -83,6 +85,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
         val intent = Intent(this, ProductActivity::class.java)
         intent.putExtra("ID", id)
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.alpha)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -101,6 +104,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
     }
 
     override fun onDestroy() {
+        Log.d("MainActivity", "onDestroy")
         super.onDestroy()
         vb = null
     }
@@ -110,5 +114,31 @@ class MainActivity : AppCompatActivity(), OnItemClickListener,
 
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
+
+    }
+
+    override fun onStart() {
+        Log.d("MainActivity", "onStart")
+        super.onStart()
+    }
+
+    override fun onRestart() {
+        Log.d("MainActivity", "onRestart")
+        super.onRestart()
+    }
+
+    override fun onResume() {
+        Log.d("MainActivity", "onResume")
+        super.onResume()
+    }
+
+    override fun onPause() {
+        Log.d("MainActivity", "onPause")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d("MainActivity", "onStop")
+        super.onStop()
     }
 }

@@ -1,9 +1,16 @@
 package ru.alinadorozhkina.tula_steel.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_CLOSE
+import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE
+import androidx.fragment.app.commit
+import androidx.fragment.app.commitNow
+import androidx.fragment.app.transaction
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.adapter.ViewPagerAdapter
@@ -28,6 +35,7 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityProductLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
+        Log.d("ProductActivity", "onCreate")
         setUpToolbar()
         val arguments = intent.extras
         setUpViewPager(arguments!!["ID"])
@@ -35,11 +43,13 @@ class ProductActivity : AppCompatActivity() {
     }
 
     private fun setUpTimer(){
-        countDownTimer = object : CountDownTimer(30000, 1000) {
-            override fun onTick(millisUntilFinished: Long) = Unit
+        countDownTimer = object : CountDownTimer(40000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                Log.d("ProductActivity", "onTick")
+            }
             override fun onFinish() {
-                MainActivity.getStartIntent(this@ProductActivity)
-                finish()
+                Log.d("ProductActivity", "onFinish")
+                toMain()
             }
         }.start()
     }
@@ -48,9 +58,17 @@ class ProductActivity : AppCompatActivity() {
         val toolbar: MaterialToolbar? = vb?.topAppBar
         setSupportActionBar(toolbar)
         toolbar!!.setNavigationOnClickListener {
-            MainActivity.getStartIntent(this)
-            finish()
+           toMain()
+
+
         }
+    }
+
+    private fun toMain() {
+        startActivity(MainActivity.getStartIntent(this))
+        finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
+
     }
 
     private fun setUpViewPager(id: Any?) {
@@ -131,11 +149,40 @@ class ProductActivity : AppCompatActivity() {
     override fun onUserInteraction() {
        countDownTimer.cancel()
         countDownTimer.start()
+        Log.d("ProductActivity", "onUserInteraction()")
+
     }
 
     override fun onDestroy() {
-        super.onDestroy()
+        Log.d("ProductActivity", "onDestroy()")
         vb = null
+        super.onDestroy()
+    }
+
+    override fun onStart() {
+        Log.d("ProductActivity", "onStart")
+        super.onStart()
+    }
+
+    override fun onRestart() {
+        Log.d("ProductActivity", "onRestart")
+        super.onRestart()
+    }
+
+    override fun onResume() {
+        Log.d("ProductActivity", "onResume")
+        super.onResume()
+    }
+
+    override fun onPause() {
+        Log.d("ProductActivity", "onPause")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d("ProductActivity", "onStop")
+        countDownTimer.cancel()
+        super.onStop()
     }
 }
 
