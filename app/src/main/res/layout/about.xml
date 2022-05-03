@@ -2,252 +2,239 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools">
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background"
-    android:padding="16dp">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blue_dark"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/about_header"
-            style="@style/TextHeaderStyleTwo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/about_header"/>
-
-        <TextView
-            style="@style/BodyStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:padding="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/about_header"
-            android:text="@string/about_body"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        style="@style/BodyStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_margin"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:textColor="@color/dark_font_grey"
-        android:text="@string/about_body2"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_picture_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal"
-        tools:listitem="@layout/item_picture_about">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
-        style="@style/BodyStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_margin"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_gravity="center"
-        android:textColor="@color/dark_font_grey"
-        android:text="@string/about_body3"/>
-    
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="874dp"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/background"
-        android:layout_gravity="center">
-
-        <TextView
-            android:id="@+id/tv_title2"
-            style="@style/BodyStyle"
-            android:textColor="@color/blue_dark"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Фасонный прокат"/>
-        <TextView
-            android:id="@+id/tv_subtitle2"
-            style="@style/BodyStyle"
-            android:textColor="@color/dark_font_grey"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf = "@id/tv_title2"
-            android:text="швеллер, двутавровая балка, равнополочный и неравнополочный уголок"/>
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="874dp"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-        android:layout_marginTop="8dp"
-    android:background="@drawable/background"
-    android:layout_gravity="center">
-
-    <TextView
-        android:id="@+id/tv_title1"
-        style="@style/BodyStyle"
-        android:textColor="@color/blue_dark"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Арматурный прокат"/>
-    <TextView
-        android:id="@+id/tv_subtitle1"
-        style="@style/BodyStyle"
-        android:textColor="@color/dark_font_grey"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf = "@id/tv_title1"
-        android:text="в мерных длинах номинальным диаметром от 8 до 40 мм
-и в мотках номинальным диаметром от 6 до 16 мм"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="874dp"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/background"
-        android:layout_gravity="center">
-
-        <TextView
-            android:id="@+id/tv_title3"
-            style="@style/BodyStyle"
-            android:textColor="@color/blue_dark"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Сортовой прокат"/>
-        <TextView
-            android:id="@+id/tv_subtitle3"
-            style="@style/BodyStyle"
-            android:textColor="@color/dark_font_grey"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf = "@id/tv_title3"
-            android:text="круглого, квадратного, полосового и шестигранного сечения"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="874dp"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/background"
-        android:layout_gravity="center">
-
-        <TextView
-            android:id="@+id/tv_title4"
-            style="@style/BodyStyle"
-            android:textColor="@color/blue_dark"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Катанка"/>
-        <TextView
-            android:id="@+id/tv_subtitle4"
-            style="@style/BodyStyle"
-            android:textColor="@color/dark_font_grey"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf = "@id/tv_title4"
-            android:text=" и круг в мотках диаметром от 5,5 до 22,0 мм"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        style="@style/BodyStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_margin"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:textColor="@color/dark_font_grey"
-        android:text="@string/about_body4"/>
+    android:layout_margin="16dp">
 
     <LinearLayout
-        android:layout_marginTop="@dimen/top_margin"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_schema"
-            android:layout_width="412dp"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/card_blue_background"
-            android:text="@string/about_schema"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="normal"
-            android:textAllCaps="false"
-            app:cornerRadius="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_dark"
+            android:gravity="center">
 
-        </com.google.android.material.button.MaterialButton>
+            <TextView
+                android:id="@+id/about_header"
+                style="@style/TextHeaderStyleTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/about_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_pcd32"
-            android:layout_width="388dp"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/card_blue_background"
-            android:text="@string/about_pcd32"
-            android:textColor="@color/black"
-            android:layout_marginStart="16dp"
-            android:textSize="18dp"
-            android:singleLine="false"
-            android:fontFamily="@font/roboto"
-            android:textStyle="normal"
-            android:textAllCaps="false"
-            app:cornerRadius="10dp">
+            <TextView
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/about_body"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/about_header" />
 
-        </com.google.android.material.button.MaterialButton>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/BodyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginEnd="48dp"
+            android:text="@string/about_body2"
+            android:textColor="@color/dark_font_grey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_picture_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_picture_about">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            style="@style/BodyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginEnd="48dp"
+            android:text="@string/about_body3"
+            android:textColor="@color/dark_font_grey" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="874dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_fasonnyi"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Фасонный прокат"
+                android:textAlignment="center"
+                android:textColor="@color/blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_fasonnyi"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="швеллер, двутавровая балка, равнополочный и неравнополочный уголок"
+                android:textAlignment="center"
+                android:textColor="@color/dark_font_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fasonnyi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="874dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_armaturnyi"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Арматурный прокат"
+                android:textAlignment="center"
+                android:textColor="@color/blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle1"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="в мерных длинах номинальным диаметром от 8 до 40 мм
+\nи в мотках номинальным диаметром от 6 до 16 мм"
+                android:textAlignment="center"
+                android:textColor="@color/dark_font_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_armaturnyi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="874dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_sortovoi"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сортовой прокат"
+                android:textAlignment="center"
+                android:textColor="@color/blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle3"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="круглого, квадратного, полосового и шестигранного сечения"
+                android:textAlignment="center"
+                android:textColor="@color/dark_font_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sortovoi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="874dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_katanka"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Катанка"
+                android:textAlignment="center"
+                android:textColor="@color/blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle4"
+                style="@style/BodyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" и круг в мотках диаметром от 5,5 до 22,0 мм"
+                android:textAlignment="center"
+                android:textColor="@color/dark_font_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_katanka" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/BodyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginEnd="48dp"
+            android:text="@string/about_body4"
+            android:textColor="@color/dark_font_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_schema"
+                style="@style/ButtonStyle"
+                android:text="@string/about_schema"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_pcd32"
+                style="@style/ButtonStyle"
+                android:layout_marginStart="16dp"
+                app:elevation="8dp"
+                android:text="@string/about_pcd32"/>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
 </ScrollView>

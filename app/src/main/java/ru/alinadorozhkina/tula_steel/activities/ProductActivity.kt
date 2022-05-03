@@ -133,14 +133,14 @@ class ProductActivity : AppCompatActivity() {
             }
 
             6 -> {
-                vb?.labelHeader?.text = "О предприятии"
+                vb?.labelHeader?.text = getString(R.string.about)
                 val certificate = FragmentAbout()
                 supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, certificate)
                     .commit()
             }
 
             7 -> {
-                vb?.labelHeader?.text = "Сертификаты"
+                vb?.labelHeader?.text = getString(R.string.certificates)
                 val certificate = FragmentCertificates()
                 supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, certificate)
                     .commit()
