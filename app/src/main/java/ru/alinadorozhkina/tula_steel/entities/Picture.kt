@@ -22,5 +22,5 @@ data class ProductionPlan(
 data class PCD32(
     override val id: Int = 0,
     override val title: Int = R.string.about_pcd32,
-    override val path: Int = R.drawable.pcd32
+    override val path: Int = R.drawable.pcd
 ): AppEntity, Parcelable
