@@ -63,34 +63,34 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
 
         vb?.tvCertificates5781482?.setOnClickListener {
             updateUI(gost57814_82, R.string.certificates_34028_2016 )
-//            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.blue_dark))
-//            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.card_blue_background))
+            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
         }
 
         vb?.tvCertificatesBelarus?.setOnClickListener {
             updateUI(gostBelarus, R.string.certificates_belarus )
-//            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.blue_dark))
-//            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.card_blue_background))
+            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
         }
 
         vb?.tvCertificatesEurope?.setOnClickListener {
             updateUI(gostEurope, R.string.certificates_europe )
-//            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.blue_dark))
+            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.card_blue_background))
         }
 
         vb?.tvCertificates340282016?.setOnClickListener {
             updateUI(gost34028_2016, R.string.certificates_34028_2016 )
-//            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.blue_dark))
-//            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
-//            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.card_blue_background))
+            vb?.tvCertificates5781482?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesBelarus?.setTextColor(resources.getColor(R.color.light_font_grey))
+            vb?.tvCertificatesEurope?.setTextColor(resources.getColor(R.color.light_font_grey))
         }
     }
 
@@ -100,6 +100,7 @@ class FragmentCertificates : Fragment(), OnItemClickListener {
     }
 
     private fun initRV(data: List<AppEntity>) = with(vb) {
+        vb?.tvCertificates340282016?.setTextColor(resources.getColor(R.color.card_blue_background))
         this?.rvCertificate?.adapter = BaseRVAdapter(
             requireContext(),
             this@FragmentCertificates,

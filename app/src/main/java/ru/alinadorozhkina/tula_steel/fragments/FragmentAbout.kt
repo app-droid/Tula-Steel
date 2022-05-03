@@ -7,13 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.alinadorozhkina.tula_steel.activities.PictureActivity
-import ru.alinadorozhkina.tula_steel.databinding.FragmentAboutBinding
+import ru.alinadorozhkina.tula_steel.adapter.PictureAdapter
+import ru.alinadorozhkina.tula_steel.databinding.AboutBinding
 import ru.alinadorozhkina.tula_steel.entities.PCD32
 import ru.alinadorozhkina.tula_steel.entities.ProductionPlan
 
 class FragmentAbout : Fragment() {
 
-    private var vb: FragmentAboutBinding? = null
+    private var vb: AboutBinding? = null
     private val productionPlan = ProductionPlan()
     private val pcD32 = PCD32()
 
@@ -21,7 +22,7 @@ class FragmentAbout : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = FragmentAboutBinding.inflate(inflater, container, false).apply {
+    ) = AboutBinding.inflate(inflater, container, false).apply {
         vb = this
     }.root
 
@@ -38,5 +39,7 @@ class FragmentAbout : Fragment() {
             intent.putExtra("Picture", pcD32)
             startActivity(intent)
         }
+
+        vb?.rvPictureAbout?.adapter = PictureAdapter(requireContext())
     }
 }

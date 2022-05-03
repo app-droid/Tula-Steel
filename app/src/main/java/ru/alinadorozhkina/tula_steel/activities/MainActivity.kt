@@ -18,6 +18,12 @@ import ru.alinadorozhkina.tula_steel.adapter.MultiRVAdapter
 import ru.alinadorozhkina.tula_steel.adapter.OnItemMultiClickListener
 import ru.alinadorozhkina.tula_steel.databinding.ActivityMainLayoutBinding
 import ru.alinadorozhkina.tula_steel.fragments.*
+import android.view.MotionEvent
+
+import android.view.View.OnTouchListener
+
+
+
 
 class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     NavigationView.OnNavigationItemSelectedListener {
@@ -38,16 +44,23 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
         super.onCreate(savedInstanceState)
         vb = ActivityMainLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
-        Log.d("MainActivity", "onCreate")
         initNavDrawer()
         initRV()
         vb?.cardCertificates?.setOnClickListener {
             intent(7)
         }
 
+        vb?.cardAbout?.setOnClickListener {
+            intent(6)
+        }
+
+        //settings()
     }
 
-    private fun initRV()= with(vb){
+    private fun settings() = with(vb) {
+    }
+
+    private fun initRV() = with(vb) {
         this!!.rvCategoryMain.adapter = MultiRVAdapter(
             this@MainActivity,
             categories,
@@ -81,7 +94,7 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
         intent(entity.id)
     }
 
-    private fun intent (id: Int) {
+    private fun intent(id: Int) {
         val intent = Intent(this, ProductActivity::class.java)
         intent.putExtra("ID", id)
         startActivity(intent)
@@ -115,30 +128,5 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
 
-    }
-
-    override fun onStart() {
-        Log.d("MainActivity", "onStart")
-        super.onStart()
-    }
-
-    override fun onRestart() {
-        Log.d("MainActivity", "onRestart")
-        super.onRestart()
-    }
-
-    override fun onResume() {
-        Log.d("MainActivity", "onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.d("MainActivity", "onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Log.d("MainActivity", "onStop")
-        super.onStop()
     }
 }

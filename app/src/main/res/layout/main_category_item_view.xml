@@ -24,9 +24,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:paddingStart="12dp"
-            android:textColor="@color/blue_dark"
+            android:textColor="@color/card_blue_background"
             android:textSize="24sp"
-            android:textStyle="bold"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_picture" />
 

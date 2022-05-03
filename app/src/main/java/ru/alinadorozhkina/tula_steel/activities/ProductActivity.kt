@@ -131,7 +131,12 @@ class ProductActivity : AppCompatActivity() {
                 vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
+
             6 -> {
+                vb?.labelHeader?.text = "О предприятии"
+                val certificate = FragmentAbout()
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, certificate)
+                    .commit()
             }
 
             7 -> {
