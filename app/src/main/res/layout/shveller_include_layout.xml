@@ -70,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:padding="2dp"
                     android:text="5П; 6,5П; 8П; 10П; 12П; 14П; 16П"/>
 
             </LinearLayout>
@@ -154,6 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
+                android:padding="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear_NTD2">
 
@@ -170,6 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:padding="2dp"
                     android:text="5У; 6,5У; 8У; 10У; 12У; 14У; 16У"/>
 
             </LinearLayout>

@@ -1,32 +1,32 @@
 package ru.alinadorozhkina.tula_steel.activities
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import ru.alinadorozhkina.tula_steel.R
-import ru.alinadorozhkina.tula_steel.entities.*
-import android.content.Intent
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
+import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.adapter.MultiRVAdapter
 import ru.alinadorozhkina.tula_steel.adapter.OnItemMultiClickListener
+import ru.alinadorozhkina.tula_steel.adapter.PictureAdapter
+import ru.alinadorozhkina.tula_steel.databinding.ActivityMainBinding
 import ru.alinadorozhkina.tula_steel.databinding.ActivityMainLayoutBinding
-import ru.alinadorozhkina.tula_steel.fragments.*
-import android.view.MotionEvent
+import ru.alinadorozhkina.tula_steel.entities.*
 
-import android.view.View.OnTouchListener
-import ru.alinadorozhkina.tula_steel.databinding.MainBinding
+class MainActivity2 : AppCompatActivity(), OnItemMultiClickListener,
+    NavigationView.OnNavigationItemSelectedListener  {
 
+    private var vb: ActivityMainBinding? = null
 
-class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
-    NavigationView.OnNavigationItemSelectedListener {
-    private var vb: MainBinding? = null
+    private val productionPlan = ProductionPlan()
+    private val pcD32 = PCD32()
     private lateinit var drawer: DrawerLayout
     private lateinit var navigationView: NavigationView
 
@@ -41,36 +41,32 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        vb = MainBinding.inflate(layoutInflater)
+        vb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(vb?.root)
         initNavDrawer()
         initRV()
-        vb?.buttonAbout?.setOnClickListener {
-            intent(6)
-        }
-        vb?.buttonCertificates?.setOnClickListener {
-            intent(7)
-        }
-//        vb?.cardCertificates?.setOnClickListener {
-//            intent(7)
-//        }
-//
-//        vb?.cardAbout?.setOnClickListener {
-//            intent(6)
-//        }
-
-        //settings()
-    }
-
-    private fun settings() = with(vb) {
     }
 
     private fun initRV() = with(vb) {
         this!!.rvCategoryMain.adapter = MultiRVAdapter(
-            this@MainActivity,
+            this@MainActivity2,
             categories,
-            this@MainActivity
+            this@MainActivity2
         )
+
+        vb?.buttonSchema?.setOnClickListener {
+            val intent = Intent(this@MainActivity2, PictureActivity::class.java)
+            intent.putExtra("Picture", productionPlan)
+            startActivity(intent)
+        }
+
+        vb?.buttonPcd32?.setOnClickListener {
+            val intent = Intent(this@MainActivity2, PictureActivity::class.java)
+            intent.putExtra("Picture", pcD32)
+            startActivity(intent)
+        }
+
+        vb?.rvPicture?.adapter = PictureAdapter(this@MainActivity2)
     }
 
     private fun initNavDrawer() {

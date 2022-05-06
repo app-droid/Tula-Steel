@@ -54,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
+                android:padding="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear_NTD">
 
@@ -70,6 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:padding="2dp"
                     android:text="25х3;4, 28х3, 30х3;4, 32х3;4, 35х3;4;5, 40х3;4;5, 45х3;4;5, 50х3;4;5;6, 56х4;5, 63х4;5;6, 70х4,5;6;7;8, 75х5;6;7;8;9, 80х5,5;6;7;8, 90х6;7;8;9, 100х6,5;7;8;10;12;14, 110х7;8, 125х8;9;10;12;14;16."/>
 
             </LinearLayout>

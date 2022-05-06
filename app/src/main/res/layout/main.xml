@@ -1,0 +1,183 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:elevation="16dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:background="#F0F0F0"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/toolbar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/label"
+                        android:layout_width="68dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/label" />
+
+                    <TextView
+                        android:id="@+id/label_header"
+                        style="@style/TextHeaderStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/side_margin_average"
+                        android:text="@string/label" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="1136dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ТД «Тула-Сталь»"
+                        android:textSize="32sp"
+                        android:textColor="@color/blue_dark"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/dark_font_grey"
+                        android:lineSpacingExtra="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="– современное предприятие, запущенное в июле 2019 г. Впервые в истории современной России запущен металлургический завод на базе кислородно-конвертерной стали..."/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_about"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:text="О компании"
+                            android:textColor="@color/card_blue_background"
+                            app:icon="@drawable/ic_baseline_arrow_right_alt_24"
+                            app:iconTint="@color/card_blue_background"
+                            app:iconGravity="end"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="normal"
+                            app:strokeColor="@color/card_blue_background"
+                            android:textSize="22sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/button_certificates"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                                android:textColor="@color/card_blue_background"
+                                app:icon="@drawable/ic_baseline_arrow_right_alt_24"
+                                app:iconTint="@color/card_blue_background"
+                                app:iconGravity="end"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/roboto"
+                                android:textStyle="normal"
+                                app:strokeColor="@color/card_blue_background"
+                                android:textSize="22sp"
+                                android:layout_width="475dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_height="wrap_content"
+                                android:text="Сертификаты соответствия" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_category_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/main_category_item_view" />
+
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="337dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/menu_background"
+        android:paddingTop="56dp"
+        app:itemHorizontalPadding="32dp"
+        app:itemVerticalPadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/navigation_drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

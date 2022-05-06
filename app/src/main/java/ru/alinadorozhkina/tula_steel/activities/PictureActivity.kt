@@ -19,6 +19,7 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 
+const val SECONDS: Long = 60000
 
 class PictureActivity : AppCompatActivity() {
 
@@ -38,6 +39,7 @@ class PictureActivity : AppCompatActivity() {
     private fun setUpPictureLoading() {
         picture = intent.getParcelableExtra("Picture")
         picture?.let { picture ->
+            Log.d("Picture activity", picture.toString())
             vb?.tvCertificateTitle?.text = getString(picture.title)
             supportPostponeEnterTransition()
             vb?.image?.load(picture.path) {
@@ -47,7 +49,7 @@ class PictureActivity : AppCompatActivity() {
     }
 
     private fun setUpTimer() {
-        countDownTimer = object : CountDownTimer(40000, 1000) {
+        countDownTimer = object : CountDownTimer(SECONDS, 1000) {
             override fun onTick(millisUntilFinished: Long) = Unit
             override fun onFinish() = toMain()
         }.start()
@@ -63,6 +65,11 @@ class PictureActivity : AppCompatActivity() {
 
     private fun toMain() {
         startActivity(MainActivity.getStartIntent(this))
+        finish()
+    }
+
+    private fun toMain2() {
+        startActivity(MainActivity2.getStartIntent(this))
         finish()
     }
 

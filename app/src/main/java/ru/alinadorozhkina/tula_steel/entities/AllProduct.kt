@@ -49,9 +49,9 @@ data class All(
         Product(
             picture = R.drawable.polosa_picture,
             title = R.string.Polosa_title,
-            description = R.string.Krug_description,
-            upakovka = R.string.Krug_upakovki,
-            marochnyiAssortiment = R.string.Krug_marochnyi_assortiment,
+            description = R.string.Polosa_description,
+            upakovka = R.string.Polosa_upakovki,
+            marochnyiAssortiment = R.string.Polosa_marochnyi_assortiment,
             itemLayoutId = R.layout.polosa_include_layout),
         Product(
             picture = R.drawable.shestigrannik,
@@ -67,7 +67,7 @@ data class All(
             marochnyiAssortiment = R.string.Kvadrat_marochnyi_assortiment,
             upakovka = R.string.Kvadrat_upakovki,
             itemLayoutId = R.layout.kvadrat_include_layout,
-            description = R.string.Kvadrat_description),
+            description = null),
         Product(
             itemLayoutId = R.layout.armatura_prutki_include_layout,
             title = R.string.Armatura_prutki_title,
@@ -89,7 +89,7 @@ data class All(
             marochnyiAssortiment = R.string.shveller_marki),
         Product(
             itemLayoutId = R.layout.ugolok_ravnopolochnyi_include_layout,
-            picture = R.drawable.ugolok_ravnopolochnyi,
+            picture = R.drawable.ugolok_ravnopolochnyi_pic,
             title = R.string.Ugolok_ravnopolochnyi_title,
             description = R.string.Ugolok_ravnopolochnyi_description,
             upakovka = R.string.Ugolok_ravnopolochnyi_upakovki,
@@ -158,9 +158,9 @@ data class SortovoiProkat(
         Product(
             picture = R.drawable.polosa_picture,
             title = R.string.Polosa_title,
-            description = R.string.Krug_description,
-            upakovka = R.string.Krug_upakovki,
-            marochnyiAssortiment = R.string.Krug_marochnyi_assortiment,
+            description = R.string.Polosa_description,
+            upakovka = R.string.Polosa_upakovki,
+            marochnyiAssortiment = R.string.Polosa_marochnyi_assortiment,
             itemLayoutId = R.layout.polosa_include_layout),
         Product(
             picture = R.drawable.shestigrannik,
@@ -176,7 +176,7 @@ data class SortovoiProkat(
             marochnyiAssortiment = R.string.Kvadrat_marochnyi_assortiment,
             upakovka = R.string.Kvadrat_upakovki,
             itemLayoutId = R.layout.kvadrat_include_layout,
-            description = R.string.Kvadrat_description
+            description = null
         )
     )
 ) : AppEntity, Parcelable
@@ -217,7 +217,7 @@ data class FasonnyiProkat(
             marochnyiAssortiment = R.string.shveller_marki),
         Product(
             itemLayoutId = R.layout.ugolok_ravnopolochnyi_include_layout,
-            picture = R.drawable.ugolok_ravnopolochnyi,
+            picture = R.drawable.ugolok_ravnopolochnyi_pic,
             title = R.string.Ugolok_ravnopolochnyi_title,
             description = R.string.Ugolok_ravnopolochnyi_description,
             upakovka = R.string.Ugolok_ravnopolochnyi_upakovki,

@@ -52,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
+                android:paddingBottom="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear_NTD">
 
@@ -68,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:paddingBottom="2dp"
                     android:text="25х4-22; 28х4-25; 30х4-22; 32х4-30; 35х4-30; 36х4-30; 40х4-32; 45х4-36; 50х4-36; 55х5-38; 60х5-56; 63х6; 65х5-60; 70х5-60; 75х4-60; 80х5-60; 85х6-60; 90х5-60; 95х6-25; 100х5-60; 105х6х25; 110х6-25; 120х6-40; 125х6-25; 130Х6-20; 140х6-20; 150х6-20."/>
 
             </LinearLayout>
@@ -166,7 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="40х4,5-6; 45х4,5-9; 50х5-8; 55х5,5-11; 60х8-9; 63х6,5-11; 65х6-11; 70х5,5-12; 75х5,5-14; 76х6,5-9,5; 80х10-12; 90х9- 18; 100х12-20; 102х10,5-16; 120х7-16; 130х10-14; 150х12-14."/>
+                    android:paddingBottom="2dp"
+                    android:text="40х4,5-6; 45х4,5-9; 50х5-8; 55х5,5-11; 60х8-9; 63х6,5-11; 65х6-11; 70х5,5-12; 75х5,5-14; 76х6,5-9,5; 80х10-12; 90х9- 18; 100х12-20; 102х10,5-16; 120х7-16; 130х10-14; 150х12-14.\n\n\n"/>
 
             </LinearLayout>
 

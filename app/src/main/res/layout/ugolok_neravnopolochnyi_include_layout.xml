@@ -70,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:padding="2dp"
                     android:text="40х25х3;4;5, 45х28х3;4, 50х32х3;4, 56х36х4;5, 63х40х4;5;6;8, 70х45х5, 75х50х5;6;8, 80х50х5;6, 90х56х5,5;6;8, 100х63х6;7;8;10, 110х70х6,5;8, 125х80х7;8;10;12, 140х90х8;10" />
 
             </LinearLayout>

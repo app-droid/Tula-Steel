@@ -26,7 +26,7 @@
     <style name="TextHeaderStyleTwo">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
@@ -95,7 +95,6 @@
         <item name="android:backgroundTint">@color/card_background</item>
 ,         <item name="cardCornerRadius">0dp</item>
         <item name="strokeColor">@color/card_background</item>
-        <item name="strokeWidth">1dp</item>
     </style>
 
     <style name="CardViewStyleMain.Round">
@@ -178,17 +177,7 @@
 
     </style>
 
-    <style name="TextProductTitle">
-        <item name="fontFamily">@font/roboto</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#F6F0F0</item>
-        <item name="android:text">@string/production</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">32px</item>
-        <item name="android:layout_marginLeft">@dimen/left_margin</item>
 
-
-    </style>
 
 
     <style name="CardViewStyle">

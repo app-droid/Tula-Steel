@@ -43,7 +43,7 @@ class ProductActivity : AppCompatActivity() {
     }
 
     private fun setUpTimer(){
-        countDownTimer = object : CountDownTimer(40000, 1000) {
+        countDownTimer = object : CountDownTimer(SECONDS, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 Log.d("ProductActivity", "onTick")
             }
@@ -64,6 +64,12 @@ class ProductActivity : AppCompatActivity() {
 
     private fun toMain() {
         startActivity(MainActivity.getStartIntent(this))
+        finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
+    }
+
+    private fun toMain2() {
+        startActivity(MainActivity2.getStartIntent(this))
         finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
     }
@@ -151,18 +157,14 @@ class ProductActivity : AppCompatActivity() {
     override fun onUserInteraction() {
        countDownTimer.cancel()
         countDownTimer.start()
-        Log.d("ProductActivity", "onUserInteraction()")
-
     }
 
     override fun onDestroy() {
-        Log.d("ProductActivity", "onDestroy()")
         vb = null
         super.onDestroy()
     }
 
     override fun onStop() {
-        Log.d("ProductActivity", "onStop")
         countDownTimer.cancel()
         super.onStop()
     }
