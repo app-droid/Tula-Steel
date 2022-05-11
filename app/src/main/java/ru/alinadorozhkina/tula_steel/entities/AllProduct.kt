@@ -115,7 +115,7 @@ data class All(
 data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
-    override val path: Int = R.drawable.tovarnaia_zagotovka_main_picture,
+    override val path: Int = R.drawable.tovarnaia_zagotovka_main_category,
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.kvadratnaia_zagotovka_include_layout,

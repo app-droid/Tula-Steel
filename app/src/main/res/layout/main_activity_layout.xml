@@ -55,17 +55,19 @@
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/welcome_card"
@@ -145,18 +147,132 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_production"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginTop="16dp"
-                    android:scrollbars="vertical"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/welcome_card"
                     app:spanCount="2"
-                    tools:listitem="@layout/main_category_item_view" />
+                    tools:listitem="@layout/main_category_item_view"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="46dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:layout_constraintStart_toEndOf="@id/rv_production"
+                    app:layout_constraintTop_toBottomOf="@id/welcome_card">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#F2EEEE"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingStart="26dp"
+                    android:paddingEnd="26dp">
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Заготовка непрерывнолитая \nквадратного сечения"/>
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="2.1. Швеллеры стальные \nгорячекатаные"/>
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="2.2	Уголки стальные \nгорячекатаные равнополочные"/>
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="2.3	Уголки стальные \nгорячекатаные неравнополочные"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="2.4	Двутавры стальные \nгорячекатаные"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="3.1.	Прокат стальной \nгорячекатаный круглый"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="3.2. Прокат стальной \nгорячекатаный полосовой"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="3.3. Прокат стальной \nгорячекатаный квадратный"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="3.4.	Прокат стальной \nгорячекатаный шестигранный"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="4.1. Прокат арматурный в прутках"/>
+
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="4.2. Прокат арматурный в мотках"/>
+
+                    <TextView
+                        style="@style/TextViewStyleDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="5. Катанка"/>
+
+
+                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.core.widget.NestedScrollView>
+        </ScrollView>
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
