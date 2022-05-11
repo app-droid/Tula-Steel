@@ -21,31 +21,32 @@ import ru.alinadorozhkina.tula_steel.fragments.*
 import android.view.MotionEvent
 
 import android.view.View.OnTouchListener
+import ru.alinadorozhkina.tula_steel.databinding.MainActivityLayoutBinding
 import ru.alinadorozhkina.tula_steel.databinding.MainBinding
 
 
 class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     NavigationView.OnNavigationItemSelectedListener {
-    private var vb: MainBinding? = null
+    private var vb: MainActivityLayoutBinding? = null
     private lateinit var drawer: DrawerLayout
     private lateinit var navigationView: NavigationView
 
     private val categories: List<AppEntity> = listOf(
         All(),
-        ArmaturnyiProkat(),
-        SortovoiProkat(),
-        Katanka(),
+        TovarnaiaZagotovka(),
         FasonnyiProkat(),
-        TovarnaiaZagotovka()
+        SortovoiProkat(),
+        ArmaturnyiProkat(),
+        Katanka()
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        vb = MainBinding.inflate(layoutInflater)
+        vb = MainActivityLayoutBinding.inflate(layoutInflater)
         setContentView(vb?.root)
         initNavDrawer()
         initRV()
-        vb?.buttonAbout?.setOnClickListener {
+        vb?.buttonAboutCompany?.setOnClickListener {
             intent(6)
         }
         vb?.buttonCertificates?.setOnClickListener {
@@ -66,7 +67,7 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     }
 
     private fun initRV() = with(vb) {
-        this!!.rvCategoryMain.adapter = MultiRVAdapter(
+        this!!.rvProduction.adapter = MultiRVAdapter(
             this@MainActivity,
             categories,
             this@MainActivity

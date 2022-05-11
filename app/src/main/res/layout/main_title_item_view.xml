@@ -3,12 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_card_view"
-    style="@style/CardViewStyleMain"
+    style="@style/CardViewProductionStyle"
+    android:layout_height="238dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
     android:backgroundTint="@color/blue_dark">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="@color/blue_dark"
         android:padding="10dp"
@@ -19,21 +22,21 @@
             android:id="@+id/tv_our_production"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/our_prodaction"
+            android:text="Наша продукция"
             android:textSize="24sp"
             android:gravity="center_vertical"
             android:fontFamily="@font/roboto"
-            android:textColor="@color/light_font_grey"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/ic_baseline_arrow_right_alt_24_dark">
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"/>
 
-        </com.google.android.material.imageview.ShapeableImageView>
+
 
 
     </LinearLayout>

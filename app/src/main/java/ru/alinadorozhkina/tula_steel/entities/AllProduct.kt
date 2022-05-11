@@ -115,7 +115,7 @@ data class All(
 data class TovarnaiaZagotovka(
     override val id: Int = 1,
     override val title: Int = R.string.category_tovarnaia_zagotovka,
-    override val path: Int = R.drawable.category_tovarnaia_zagotovka,
+    override val path: Int = R.drawable.tovarnaia_zagotovka_main_picture,
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.kvadratnaia_zagotovka_include_layout,
@@ -131,7 +131,7 @@ data class TovarnaiaZagotovka(
 data class Katanka(
     override val id: Int = 2,
     override val title: Int = R.string.category_katanka,
-    override val path: Int = R.drawable.category_katanka,
+    override val path: Int = R.drawable.katanka_main_category,
     val products: List<Product> = listOf(
         Product(
             itemLayoutId =R.layout.katanka_include_layout,
@@ -146,7 +146,7 @@ data class Katanka(
 data class SortovoiProkat(
     override val id: Int = 3,
     override val title: Int = R.string.category_sortovoi_prokat,
-    override val path: Int = R.drawable.category_sortovoi_prokat,
+    override val path: Int = R.drawable.sortovoi_prokat_main_category,
     val products: List<Product> = listOf(
         Product(
             picture = R.drawable.krug_picture,
@@ -185,7 +185,7 @@ data class SortovoiProkat(
 data class ArmaturnyiProkat(
     override val id: Int = 4,
     override val title: Int = R.string.category_armaturnyi_prokat,
-    override val path: Int = R.drawable.category_armaturnyi_prokat,
+    override val path: Int = R.drawable.armaturnyi_prokat_main_category,
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.armatura_prutki_include_layout,
@@ -206,7 +206,7 @@ data class ArmaturnyiProkat(
 data class FasonnyiProkat(
     override val id: Int = 5,
     override val title: Int = R.string.category_fasonnyi_prokat,
-    override val path: Int = R.drawable.category_fasonnyi_prokat,
+    override val path: Int = R.drawable.fasonnyi_prokat_main_category,
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.shveller_include_layout,

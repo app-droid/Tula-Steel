@@ -148,7 +148,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
