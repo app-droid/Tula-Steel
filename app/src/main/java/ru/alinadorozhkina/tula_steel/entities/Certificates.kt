@@ -116,3 +116,10 @@ data class Certificate4_7(
     override val title: Int = R.string.certificates_4_7,
     override val path: Int = R.drawable.certificate_4_7
 ): AppEntity, Parcelable
+
+@Parcelize
+data class PCD(
+    override val id: Double = 1.0,
+    override val title: Int = R.string.pcd32,
+    override val path: Int = R.drawable.pcdnew
+): AppEntity, Parcelable

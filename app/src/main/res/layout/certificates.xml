@@ -13,9 +13,9 @@
         android:id="@+id/linear_layout_picture"
         android:layout_width="480px"
         android:layout_height="match_parent"
-        android:background="@drawable/menu_background"
+        android:background="@drawable/background"
         android:orientation="vertical"
-        android:gravity="center_vertical"
+        android:gravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -34,8 +34,7 @@
         <View
             android:layout_width="490px"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/top_margin_average"
-            android:background="@color/light_font_grey" />
+            android:background="@color/dark_font_grey" />
 
         <TextView
             android:id="@+id/tv_certificates_57814_82"
@@ -49,8 +48,7 @@
         <View
             android:layout_width="490px"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/top_margin_average"
-            android:background="@color/light_font_grey" />
+            android:background="@color/dark_font_grey" />
 
         <TextView
             android:id="@+id/tv_certificates_belarus"
@@ -63,8 +61,7 @@
         <View
             android:layout_width="490px"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/top_margin_average"
-            android:background="@color/light_font_grey" />
+            android:background="@color/dark_font_grey" />
 
         <TextView
             android:id="@+id/tv_certificates_europe"
@@ -74,6 +71,18 @@
             android:textColor="@drawable/text_color_selector"
             android:text="@string/certificates_europe" />
 
+        <View
+            android:layout_width="490px"
+            android:layout_height="1dp"
+            android:background="@color/dark_font_grey" />
+
+        <TextView
+            android:id="@+id/tv_pcd"
+            style="@style/TextMenuStyle"
+            android:textSize="32px"
+            android:paddingEnd="12px"
+            android:textColor="@drawable/text_color_selector"
+            android:text="@string/about_pcd32" />
     </LinearLayout>
 
     <LinearLayout
@@ -101,7 +110,6 @@
             android:id="@+id/rv_certificate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_margin"
             tools:listitem="@layout/item_certificate_card"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="3"/>

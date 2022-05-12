@@ -34,13 +34,5 @@ class FragmentAbout : Fragment() {
             intent.putExtra("Picture", productionPlan)
             startActivity(intent)
         }
-
-//        vb?.buttonPcd32?.setOnClickListener {
-//            val intent = Intent(activity, PictureActivity::class.java)
-//            intent.putExtra("Picture", pcD32)
-//            startActivity(intent)
-
-
-        //vb?.rvPictureAbout?.adapter = PictureAdapter(requireContext())
     }
 }

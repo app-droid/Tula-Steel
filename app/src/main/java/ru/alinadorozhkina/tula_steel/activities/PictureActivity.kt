@@ -68,15 +68,10 @@ class PictureActivity : AppCompatActivity() {
         finish()
     }
 
-    override fun onBackPressed() {
-        toMain()
-    }
-
     override fun onUserInteraction() {
         countDownTimer.cancel()
         countDownTimer.start()
         Log.d("PictureActivity", "onUserInteraction()")
-
     }
 
     override fun onDestroy() {

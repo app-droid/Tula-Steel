@@ -82,6 +82,11 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
             it.tvKatanka.setOnClickListener {
                 intent(5.0)
             }
+
+            it.label.setOnLongClickListener {
+                finish()
+                true
+            }
         }
     }
 
