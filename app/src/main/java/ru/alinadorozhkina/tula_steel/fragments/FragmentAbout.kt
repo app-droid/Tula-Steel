@@ -9,12 +9,13 @@ import android.view.ViewGroup
 import ru.alinadorozhkina.tula_steel.activities.PictureActivity
 import ru.alinadorozhkina.tula_steel.adapter.PictureAdapter
 import ru.alinadorozhkina.tula_steel.databinding.AboutBinding
+import ru.alinadorozhkina.tula_steel.databinding.AboutCompanyLayoutBinding
 import ru.alinadorozhkina.tula_steel.entities.PCD32
 import ru.alinadorozhkina.tula_steel.entities.ProductionPlan
 
 class FragmentAbout : Fragment() {
 
-    private var vb: AboutBinding? = null
+    private var vb: AboutCompanyLayoutBinding? = null
     private val productionPlan = ProductionPlan()
     private val pcD32 = PCD32()
 
@@ -22,7 +23,7 @@ class FragmentAbout : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = AboutBinding.inflate(inflater, container, false).apply {
+    ) = AboutCompanyLayoutBinding.inflate(inflater, container, false).apply {
         vb = this
     }.root
 
@@ -34,12 +35,12 @@ class FragmentAbout : Fragment() {
             startActivity(intent)
         }
 
-        vb?.buttonPcd32?.setOnClickListener {
-            val intent = Intent(activity, PictureActivity::class.java)
-            intent.putExtra("Picture", pcD32)
-            startActivity(intent)
-        }
+//        vb?.buttonPcd32?.setOnClickListener {
+//            val intent = Intent(activity, PictureActivity::class.java)
+//            intent.putExtra("Picture", pcD32)
+//            startActivity(intent)
 
-        vb?.rvPictureAbout?.adapter = PictureAdapter(requireContext())
+
+        //vb?.rvPictureAbout?.adapter = PictureAdapter(requireContext())
     }
 }

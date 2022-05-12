@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        style="@style/CardViewBackgroundStyle"
+        android:layout_width="730dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/TextHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_company_title"/>
+
+            <TextView
+                style="@style/TextViewStyleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_company4"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/TextViewStyleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_company5"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/TextViewStyleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_company6"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/TextViewStyleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_company7"
+                android:layout_marginTop="15dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_schema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MaterialButtonFilledIconStyle"
+                android:text="@string/about_schema"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="start"
+                app:icon="@drawable/ic_baseline_arrow_right_alt_24" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        style="@style/CardViewBackgroundStyle"
+        android:layout_width="639px"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="16dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toEndOf="@id/card1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="390dp"
+                android:layout_height="200dp"
+                android:src="@drawable/company_picture"/>
+
+            <ImageView
+                android:layout_width="390dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/company_picture2"/>
+
+            <ImageView
+                android:layout_width="390dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/company_picture3"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

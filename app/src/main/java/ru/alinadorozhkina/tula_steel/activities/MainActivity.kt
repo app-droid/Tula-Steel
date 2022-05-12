@@ -20,7 +20,6 @@ import ru.alinadorozhkina.tula_steel.fragments.*
 
 import ru.alinadorozhkina.tula_steel.databinding.MainActivityLayoutBinding
 
-
 class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
     NavigationView.OnNavigationItemSelectedListener {
     private var vb: MainActivityLayoutBinding? = null
