@@ -6,10 +6,15 @@
 
     <string name="main">Главная</string>
     <string name="category_tovarnaia_zagotovka">1. Товарная заготовка</string>
+    <string name="category_fasonnyi_prokat">2. Фасонный прокат</string>
     <string name="category_sortovoi_prokat">3. Сортовой прокат</string>
     <string name="category_armaturnyi_prokat">4. Арматурный прокат</string>
     <string name="category_katanka">5. Катанка</string>
-    <string name="category_fasonnyi_prokat">2. Фасонный прокат</string>
+    <string name="menu_fasonnyi_prokat">Фасонный прокат</string>
+    <string name="menu_tovarnaia_zagotovka">Товарная заготовка</string>
+    <string name="menu_sortovoi_prokat">Сортовой прокат</string>
+    <string name="menu_armaturnyi_prokat">Арматурный прокат</string>
+    <string name="menu_katanka">Катанка</string>
     <string name="about">О заводе</string>
     <string name="certificates">Сертификаты</string>
 
@@ -232,6 +237,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about_pcd32">Свидетельство \nо признании производителя РСD 32</string>
     <string name="about_schema">Схема производства</string>
+
+
+    <string name="shveller_number_title">2.1. Швеллеры стальные \nгорячекатаные</string>
+    <string name="kvadratnaia_number_title">1. Заготовка непрерывнолитая \nквадратного сечения</string>
+    <string name="ugolok_ravno_number">2.2 Уголки стальные \nгорячекатаные равнополочные</string>
+    <string name="krug_number_title">3.1. Прокат стальной \nгорячекатаный круглый</string>
+    <string name="polosa_number_title">3.2. Прокат стальной \nгорячекатаный полосовой</string>
+    <string name="armatura_prutki_number_title">4.1. Прокат арматурный в прутках</string>
+    <string name="armatura_motki_number_title">4.2. Прокат арматурный в мотках</string>
+    <string name="katanka_number_title">5. Катанка</string>
 
 
 </resources>

@@ -43,15 +43,6 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
         initNavDrawer()
         initRV()
         initViews()
-//        vb?.cardCertificates?.setOnClickListener {
-//            intent(7)
-//        }
-//
-//        vb?.cardAbout?.setOnClickListener {
-//            intent(6)
-//        }
-
-        //settings()
     }
 
     private fun initViews() {
@@ -93,9 +84,6 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
                 intent(5.0)
             }
         }
-    }
-
-    private fun settings() = with(vb) {
     }
 
     private fun initRV() = with(vb) {
@@ -165,6 +153,5 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
 
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
-
     }
 }

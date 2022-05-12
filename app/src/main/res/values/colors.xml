@@ -12,7 +12,7 @@
     <color name="dark_font_grey">#41494C</color>
     <color name="light_font_grey">#F0F0F0</color>
     <color name="menu_selected_grey">#838282</color>
-    <color name="card_background">#F0F0F0</color>
+    <color name="card_background">#FCF8F8</color>
     <color name="card_blue_background">#268DCB</color>
     <color name="pastel_orange_light">#FBE8DF</color>
 </resources>

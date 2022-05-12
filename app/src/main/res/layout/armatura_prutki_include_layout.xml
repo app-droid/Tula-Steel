@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card1"
@@ -12,6 +12,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
         android:layout_margin="16dp"
+        app:cardUseCompatPadding="true"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -190,6 +191,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
         android:layout_margin="16dp"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toStartOf="parent"
@@ -370,6 +372,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
         android:layout_margin="16dp"
+        app:cardUseCompatPadding="true"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toEndOf="@id/card3"
         app:layout_constraintTop_toBottomOf="@id/card2">
@@ -549,6 +552,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
         android:layout_margin="16dp"
+        app:cardUseCompatPadding="true"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toEndOf="@id/card1"
         app:layout_constraintTop_toTopOf="parent">
@@ -728,6 +732,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
         android:layout_margin="16dp"
+        app:cardUseCompatPadding="true"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card3">
@@ -907,6 +912,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="3dp"
         android:layout_margin="16dp"
+        app:cardUseCompatPadding="true"
         android:backgroundTint="@color/card_background"
         app:layout_constraintStart_toEndOf="@id/card5"
         app:layout_constraintTop_toBottomOf="@id/card4">

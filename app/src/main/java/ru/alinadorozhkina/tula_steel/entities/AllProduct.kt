@@ -119,9 +119,9 @@ data class TovarnaiaZagotovka(
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.kvadratnaia_zagotovka_include_layout,
-            title = R.string.Tovarnaia_zagotovka_title,
+            title = R.string.kvadratnaia_number_title,
             description = R.string.Tovarnaia_zagotovka_description,
-            picture = R.drawable.tovarnaia_zagotovka,
+            picture = R.drawable.kvadratnaia_detailed_picture,
             marochnyiAssortiment = R.string.Tovarnaia_zagotovka_marochnyi_assortiment,
             upakovka = R.string.Tovarnaia_zagotovka_upakovki)
     )
@@ -135,8 +135,8 @@ data class Katanka(
     val products: List<Product> = listOf(
         Product(
             itemLayoutId =R.layout.katanka_include_layout,
-            picture = R.drawable.katanka_pic,
-            title = R.string.Katanka_title,
+            picture = R.drawable.katanka_detailed_picture,
+            title = R.string.katanka_number_title,
             description = R.string.Katanka_description,
             upakovka = R.string.Katanka_upakovki)
     )
@@ -149,15 +149,15 @@ data class SortovoiProkat(
     override val path: Int = R.drawable.sortovoi_prokat_main_category,
     val products: List<Product> = listOf(
         Product(
-            picture = R.drawable.krug_picture,
-            title = R.string.Krug_title,
+            picture = R.drawable.krug_detailed_picture,
+            title = R.string.krug_number_title,
             description = R.string.Krug_description,
             upakovka = R.string.Krug_upakovki,
             marochnyiAssortiment = R.string.Krug_marochnyi_assortiment,
             itemLayoutId = R.layout.krug_include_layout),
         Product(
-            picture = R.drawable.polosa_picture,
-            title = R.string.Polosa_title,
+            picture = R.drawable.polosa_detailed_picture,
+            title = R.string.polosa_number_title,
             description = R.string.Polosa_description,
             upakovka = R.string.Polosa_upakovki,
             marochnyiAssortiment = R.string.Polosa_marochnyi_assortiment,
@@ -189,14 +189,14 @@ data class ArmaturnyiProkat(
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.armatura_prutki_include_layout,
-            title = R.string.Armatura_prutki_title,
+            title = R.string.armatura_prutki_number_title,
             description = R.string.Armatura_prutki_description,
             upakovka = R.string.Armatura_prutki_upakovki,
-            picture = R.drawable.armatura_prutki_picture),
+            picture = R.drawable.amatura_prutki_detailed_picture),
         Product(
             itemLayoutId = R.layout.armatura_motki_include_layout,
-            picture = R.drawable.armatura_motki_picture,
-            title = R.string.Armatura_motki_title,
+            picture = R.drawable.armatura_motki_detailed_picture,
+            title = R.string.armatura_motki_number_title,
             description = R.string.Armatura_motki_description,
             upakovka = R.string.Armatura_motki_upakovki)
     )
@@ -210,32 +210,32 @@ data class FasonnyiProkat(
     val products: List<Product> = listOf(
         Product(
             itemLayoutId = R.layout.shveller_include_layout,
-            picture = R.drawable.product_shveller,
-            title = R.string.shveller_title,
+            picture = R.drawable.shveller_detailed_picture,
+            title = R.string.shveller_number_title,
             description = R.string.shveller_description,
             upakovka = R.string.shveller_upakovki,
             marochnyiAssortiment = R.string.shveller_marki),
         Product(
             itemLayoutId = R.layout.ugolok_ravnopolochnyi_include_layout,
-            picture = R.drawable.ugolok_ravnopolochnyi_pic,
-            title = R.string.Ugolok_ravnopolochnyi_title,
+            picture = R.drawable.ugolok_detailed_picture,
+            title = R.string.ugolok_ravno_number,
             description = R.string.Ugolok_ravnopolochnyi_description,
             upakovka = R.string.Ugolok_ravnopolochnyi_upakovki,
             marochnyiAssortiment = R.string.Ugolok_ravnopolochnyi_marochnyi_assortiment),
-        Product(
-            itemLayoutId = R.layout.ugolok_neravnopolochnyi_include_layout,
-            picture = R.drawable.ugolok_neravnopolochnyi,
-            title = R.string.Ugolok_neravnopolochnyi_title,
-            description = R.string.Ugolok_neravnopolochnyi_description,
-            upakovka = R.string.Ugolok_neravnopolochnyi_upakovki,
-            marochnyiAssortiment = R.string.Ugolok_neravnopolochnyi_marochnyi_assortiment),
-        Product(
-            itemLayoutId = R.layout.dvutavrovaia_balka_include_layout,
-            picture = R.drawable.dvutavrovaia_balka,
-            title = R.string.Dvutavrovaia_balka_title,
-            description = R.string.Dvutavrovaia_balka_description,
-            upakovka = R.string.Dvutavrovaia_balka_upakovki,
-            marochnyiAssortiment = R.string.Dvutavrovaia_balka_marochnyi_assortiment
-        )
+//        Product(
+//            itemLayoutId = R.layout.ugolok_neravnopolochnyi_include_layout,
+//            picture = R.drawable.ugolok_neravnopolochnyi,
+//            title = R.string.Ugolok_neravnopolochnyi_title,
+//            description = R.string.Ugolok_neravnopolochnyi_description,
+//            upakovka = R.string.Ugolok_neravnopolochnyi_upakovki,
+//            marochnyiAssortiment = R.string.Ugolok_neravnopolochnyi_marochnyi_assortiment),
+//        Product(
+//            itemLayoutId = R.layout.dvutavrovaia_balka_include_layout,
+//            picture = R.drawable.dvutavrovaia_balka,
+//            title = R.string.Dvutavrovaia_balka_title,
+//            description = R.string.Dvutavrovaia_balka_description,
+//            upakovka = R.string.Dvutavrovaia_balka_upakovki,
+//            marochnyiAssortiment = R.string.Dvutavrovaia_balka_marochnyi_assortiment
+//        )
     )
 ) : AppEntity, Parcelable

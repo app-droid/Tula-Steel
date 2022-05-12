@@ -59,11 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
-
+            android:layout_marginBottom="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -73,7 +70,10 @@
                     android:id="@+id/welcome_card"
                     style="@style/CardViewBackgroundStyle"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -148,7 +148,9 @@
                     android:id="@+id/rv_production"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
+                    android:layout_marginStart="70dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/welcome_card"
@@ -158,8 +160,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:layout_marginStart="52dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     app:cardElevation="8dp"
                     app:cardCornerRadius="14dp"
                     app:layout_constraintStart_toEndOf="@id/rv_production"
@@ -180,7 +183,7 @@
                         style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1. Заготовка непрерывнолитая \nквадратного сечения"/>
+                        android:text="@string/kvadratnaia_number_title"/>
 
                     <TextView
                         android:id="@+id/tv_shveller"
@@ -188,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="2.1. Швеллеры стальные \nгорячекатаные"/>
+                        android:text="@string/shveller_number_title"/>
 
                     <TextView
                         android:id="@+id/tv_ygolki_ravnopolochnyi"
@@ -196,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="2.2	Уголки стальные \nгорячекатаные равнополочные"/>
+                        android:text="@string/ugolok_ravno_number"/>
 
                     <TextView
                         style="@style/TextViewStyleDescription"
@@ -222,7 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="3.1.	Прокат стальной \nгорячекатаный круглый"/>
+                        android:text="@string/krug_number_title"/>
 
 
                     <TextView
@@ -231,7 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="3.2. Прокат стальной \nгорячекатаный полосовой"/>
+                        android:text="@string/polosa_number_title"/>
 
 
                     <TextView
@@ -258,7 +261,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="4.1. Прокат арматурный в прутках"/>
+                        android:text="@string/armatura_prutki_number_title"/>
 
 
                     <TextView
@@ -267,7 +270,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="4.2. Прокат арматурный в мотках"/>
+                        android:text="@string/armatura_motki_number_title"/>
 
                     <TextView
                         android:id="@+id/tv_katanka"
@@ -275,7 +278,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="5. Катанка"/>
+                        android:text="@string/katanka_number_title"/>
 
 
                 </LinearLayout>
