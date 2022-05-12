@@ -68,11 +68,6 @@ class PictureActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun toMain2() {
-        startActivity(MainActivity2.getStartIntent(this))
-        finish()
-    }
-
     override fun onUserInteraction() {
         countDownTimer.cancel()
         countDownTimer.start()

@@ -22,6 +22,7 @@
         <item name="fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">26sp</item>
+        <item name="android:letterSpacing">0.05</item>
         <item name="android:textColor">#5B5656</item>
     </style>
 
@@ -31,6 +32,10 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextViewStyleDescription.Click">
+        <item name="android:textColor">@drawable/text_color_dark</item>
     </style>
 
     <style name="MaterialButtonFilledIconStyle" parent="Widget.MaterialComponents.Button.Icon">

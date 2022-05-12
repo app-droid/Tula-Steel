@@ -1,23 +1,16 @@
 package ru.alinadorozhkina.tula_steel.activities
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_CLOSE
-import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE
-import androidx.fragment.app.commit
-import androidx.fragment.app.commitNow
-import androidx.fragment.app.transaction
 import com.google.android.material.appbar.MaterialToolbar
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.adapter.ViewPagerAdapter
 import ru.alinadorozhkina.tula_steel.databinding.ActivityProductLayoutBinding
 import ru.alinadorozhkina.tula_steel.entities.*
 import ru.alinadorozhkina.tula_steel.fragments.*
-
 
 class ProductActivity : AppCompatActivity() {
 
@@ -68,15 +61,9 @@ class ProductActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
     }
 
-    private fun toMain2() {
-        startActivity(MainActivity2.getStartIntent(this))
-        finish()
-        overridePendingTransition(R.anim.slide_in_left, R.anim.alpha)
-    }
-
     private fun setUpViewPager(id: Any?) {
         when (id) {
-            0 -> {
+            0.0 -> {
                 vb?.labelHeader?.text = getString(all.title)
                 val dataFragments: MutableList<Fragment> = mutableListOf()
                 all.products.forEach {
@@ -86,7 +73,7 @@ class ProductActivity : AppCompatActivity() {
                 vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
-            1 -> {
+            1.0 -> {
                 vb?.labelHeader?.text = getString(tovarnaiaZagotovka.title)
                 val dataFragments: MutableList<Fragment> = mutableListOf()
                 tovarnaiaZagotovka.products.forEach {
@@ -96,38 +83,7 @@ class ProductActivity : AppCompatActivity() {
                 vb?.viewPager2?.setPadding(155, 0, 155, 0)
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
-            2 -> {
-                val dataFragments: MutableList<Fragment> = mutableListOf()
-                katanka.products.forEach {
-                    dataFragments.add(BaseFragment.newInstance(it))
-                }
-                vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155, 0, 155, 0)
-                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
-                vb?.labelHeader?.text = getString(katanka.title)
-            }
-            3 -> {
-                vb?.labelHeader?.text = getString(sortovoiProkat.title)
-                val dataFragments: MutableList<Fragment> = mutableListOf()
-                sortovoiProkat.products.forEach {
-                    dataFragments.add(BaseFragment.newInstance(it))
-                }
-                vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155, 0, 155, 0)
-                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
-            }
-            4 -> {
-                vb?.labelHeader?.text = getString(armaturnyiProkat.title)
-                val dataFragments: MutableList<Fragment> = mutableListOf()
-                armaturnyiProkat.products.forEach {
-                    dataFragments.add(BaseFragment.newInstance(it))
-                }
-                vb?.viewPager2?.clipToPadding = false
-                vb?.viewPager2?.setPadding(155, 0, 155, 0)
-                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
-            }
-
-            5 -> {
+            2.0 -> {
                 vb?.labelHeader?.text = getString(fasonnyiProkat.title)
                 val dataFragments: MutableList<Fragment> = mutableListOf()
                 fasonnyiProkat.products.forEach {
@@ -138,14 +94,87 @@ class ProductActivity : AppCompatActivity() {
                 vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
             }
 
-            6 -> {
+            2.1 -> {
+                vb?.labelHeader?.text = getString(R.string.shveller_title)
+                val shveller = BaseFragment.newInstance(fasonnyiProkat.products[0])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, shveller)
+                    .commit()
+            }
+
+            2.2 -> {
+                vb?.labelHeader?.text = getString(R.string.Ugolok_ravnopolochnyi_title)
+                val shveller = BaseFragment.newInstance(fasonnyiProkat.products[1])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, shveller)
+                    .commit()
+            }
+            3.0 -> {
+                vb?.labelHeader?.text = getString(sortovoiProkat.title)
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                sortovoiProkat.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+            }
+
+            3.1 -> {
+                vb?.labelHeader?.text = getString(R.string.Krug_title)
+                val krug = BaseFragment.newInstance(sortovoiProkat.products[0])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, krug)
+                    .commit()
+            }
+
+            3.2 -> {
+                vb?.labelHeader?.text = getString(R.string.Polosa_title)
+                val polosa = BaseFragment.newInstance(sortovoiProkat.products[1])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, polosa)
+                    .commit()
+            }
+            4.0 -> {
+                vb?.labelHeader?.text = getString(armaturnyiProkat.title)
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                armaturnyiProkat.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+            }
+
+            4.1 -> {
+                vb?.labelHeader?.text = getString(R.string.Armatura_prutki_title)
+                val prutki = BaseFragment.newInstance(armaturnyiProkat.products[0])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, prutki)
+                    .commit()
+            }
+
+            4.2 -> {
+                vb?.labelHeader?.text = getString(R.string.Armatura_motki_title)
+                val motki = BaseFragment.newInstance(armaturnyiProkat.products[1])
+                supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, motki)
+                    .commit()
+            }
+
+            5.0 -> {
+                val dataFragments: MutableList<Fragment> = mutableListOf()
+                katanka.products.forEach {
+                    dataFragments.add(BaseFragment.newInstance(it))
+                }
+                vb?.viewPager2?.clipToPadding = false
+                vb?.viewPager2?.setPadding(155, 0, 155, 0)
+                vb?.viewPager2?.adapter = ViewPagerAdapter(dataFragments, supportFragmentManager)
+                vb?.labelHeader?.text = getString(katanka.title)
+            }
+
+            6.0 -> {
                 vb?.labelHeader?.text = getString(R.string.about)
                 val certificate = FragmentAbout()
                 supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, certificate)
                     .commit()
             }
 
-            7 -> {
+            7.0 -> {
                 vb?.labelHeader?.text = getString(R.string.certificates)
                 val certificate = FragmentCertificates()
                 supportFragmentManager.beginTransaction().add(R.id.frame_for_fragments, certificate)

@@ -16,10 +16,10 @@ class PictureAdapter(
 ) : RecyclerView.Adapter<PictureAdapter.PictureViewHolder>() {
 
     private val pictures: List<Picture> = listOf(
-        Picture(1, 1, R.drawable.about_picture1),
-        Picture(1, 1, R.drawable.about_picture2),
-        Picture(1, 1, R.drawable.about_picture3),
-        Picture(1, 1, R.drawable.about_picture4),
+        Picture(1.0, 1, R.drawable.about_picture1),
+        Picture(1.0, 1, R.drawable.about_picture2),
+        Picture(1.0, 1, R.drawable.about_picture3),
+        Picture(1.0, 1, R.drawable.about_picture4),
     )
 
 

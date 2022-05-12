@@ -16,13 +16,9 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import ru.alinadorozhkina.tula_steel.adapter.MultiRVAdapter
 import ru.alinadorozhkina.tula_steel.adapter.OnItemMultiClickListener
-import ru.alinadorozhkina.tula_steel.databinding.ActivityMainLayoutBinding
 import ru.alinadorozhkina.tula_steel.fragments.*
-import android.view.MotionEvent
 
-import android.view.View.OnTouchListener
 import ru.alinadorozhkina.tula_steel.databinding.MainActivityLayoutBinding
-import ru.alinadorozhkina.tula_steel.databinding.MainBinding
 
 
 class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
@@ -46,12 +42,7 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
         setContentView(vb?.root)
         initNavDrawer()
         initRV()
-        vb?.buttonAboutCompany?.setOnClickListener {
-            intent(6)
-        }
-        vb?.buttonCertificates?.setOnClickListener {
-            intent(7)
-        }
+        initViews()
 //        vb?.cardCertificates?.setOnClickListener {
 //            intent(7)
 //        }
@@ -61,6 +52,47 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
 //        }
 
         //settings()
+    }
+
+    private fun initViews() {
+        vb?.let {
+            it.buttonAboutCompany.setOnClickListener {
+                intent(6.0)
+            }
+            it.buttonCertificates.setOnClickListener {
+                intent(7.0)
+            }
+            it.tvKvadratnaiaZagotovka.setOnClickListener {
+                intent(1.0)
+            }
+            it.tvShveller.setOnClickListener {
+                intent(2.1)
+            }
+
+            it.tvYgolkiRavnopolochnyi.setOnClickListener {
+                intent(2.2)
+            }
+
+            it.tvKrug.setOnClickListener {
+                intent(3.1)
+            }
+
+            it.tvPolosa.setOnClickListener {
+                intent(3.2)
+            }
+
+            it.tvArmaturaVPrutkah.setOnClickListener {
+                intent(4.1)
+            }
+            it.tvArmaturaVMotkah.setOnClickListener {
+                intent(4.2)
+
+            }
+
+            it.tvKatanka.setOnClickListener {
+                intent(5.0)
+            }
+        }
     }
 
     private fun settings() = with(vb) {
@@ -100,7 +132,7 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
         intent(entity.id)
     }
 
-    private fun intent(id: Int) {
+    private fun intent(id: Double) {
         val intent = Intent(this, ProductActivity::class.java)
         intent.putExtra("ID", id)
         startActivity(intent)
@@ -109,13 +141,13 @@ class MainActivity : AppCompatActivity(), OnItemMultiClickListener,
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.item1 -> intent(1)
-            R.id.item2 -> intent(2)
-            R.id.item3 -> intent(3)
-            R.id.item4 -> intent(4)
-            R.id.item5 -> intent(5)
-            R.id.item6 -> intent(6)
-            R.id.item7 -> intent(7)
+            R.id.item1 -> intent(1.0)
+            R.id.item2 -> intent(2.0)
+            R.id.item3 -> intent(3.0)
+            R.id.item4 -> intent(4.0)
+            R.id.item5 -> intent(5.0)
+            R.id.item6 -> intent(6.0)
+            R.id.item7 -> intent(7.0)
         }
 
         drawer.closeDrawer(GravityCompat.START)

@@ -1,13 +1,9 @@
 package ru.alinadorozhkina.tula_steel.adapter
 
-import android.animation.ObjectAnimator
 import android.content.Context
-import android.graphics.Color
-import android.provider.Settings.System.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import ru.alinadorozhkina.tula_steel.R
 import ru.alinadorozhkina.tula_steel.databinding.MainCategoryItemViewBinding
@@ -17,7 +13,6 @@ import ru.alinadorozhkina.tula_steel.entities.AppEntity
 interface OnItemMultiClickListener {
     fun onItemClick(entity: AppEntity)
 }
-
 
 class MultiRVAdapter(
     val context: Context,
@@ -60,7 +55,7 @@ class MultiRVAdapter(
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (data[position].id == 0) TYPE_TITLE else
+        return if (data[position].id == 0.0) TYPE_TITLE else
             TYPE_CATEGORIES
     }
 

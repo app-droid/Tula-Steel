@@ -83,7 +83,7 @@
 
                         <TextView
                             android:id="@+id/about_company_title"
-                            style="@style/TextViewStyleTitle"
+                            style="@style/TextHeaderStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/about_company_title" />
@@ -159,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:layout_marginStart="46dp"
+                    android:layout_marginStart="52dp"
                     app:cardElevation="8dp"
                     app:cardCornerRadius="14dp"
                     app:layout_constraintStart_toEndOf="@id/rv_production"
@@ -170,36 +170,40 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="#F2EEEE"
-                    android:paddingBottom="16dp"
-                    android:paddingTop="16dp"
+                    android:paddingBottom="22dp"
+                    android:paddingTop="22dp"
                     android:paddingStart="26dp"
                     android:paddingEnd="26dp">
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_kvadratnaia_zagotovka"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1. Заготовка непрерывнолитая \nквадратного сечения"/>
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_shveller"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="2.1. Швеллеры стальные \nгорячекатаные"/>
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_ygolki_ravnopolochnyi"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="2.2	Уголки стальные \nгорячекатаные равнополочные"/>
 
                     <TextView
                         style="@style/TextViewStyleDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/menu_selected_grey"
                         android:text="2.3	Уголки стальные \nгорячекатаные неравнополочные"/>
 
 
@@ -207,23 +211,26 @@
                         style="@style/TextViewStyleDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/menu_selected_grey"
                         android:text="2.4	Двутавры стальные \nгорячекатаные"/>
 
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_krug"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="3.1.	Прокат стальной \nгорячекатаный круглый"/>
 
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_polosa"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="3.2. Прокат стальной \nгорячекатаный полосовой"/>
 
 
@@ -231,7 +238,8 @@
                         style="@style/TextViewStyleDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/menu_selected_grey"
                         android:text="3.3. Прокат стальной \nгорячекатаный квадратный"/>
 
 
@@ -239,30 +247,34 @@
                         style="@style/TextViewStyleDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/menu_selected_grey"
                         android:text="3.4.	Прокат стальной \nгорячекатаный шестигранный"/>
 
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_armatura_v_prutkah"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="4.1. Прокат арматурный в прутках"/>
 
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_armatura_v_motkah"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="4.2. Прокат арматурный в мотках"/>
 
                     <TextView
-                        style="@style/TextViewStyleDescription"
+                        android:id="@+id/tv_katanka"
+                        style="@style/TextViewStyleDescription.Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:text="5. Катанка"/>
 
 
